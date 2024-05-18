@@ -1,1 +1,47 @@
-<p>company works!</p>
+<div class="min-h-screen bg-gray-100 p-8">
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6 text-center">Espace Société</h2>
+
+    <h3 class="text-xl font-semibold mb-4">Publier une offre d'emploi</h3>
+    <form  class="space-y-6 mb-8">
+      <div class="form-group">
+        <label for="title" class="block text-gray-700">Titre du poste</label>
+        <input type="text" id="title" class="w-full p-2 border border-gray-300 rounded" required>
+      </div>
+      <div class="form-group">
+        <label for="description" class="block text-gray-700">Description</label>
+        <textarea id="description"  class="w-full p-2 border border-gray-300 rounded" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="skills" class="block text-gray-700">Compétences requises</label>
+        <input type="text" id="skills" class="w-full p-2 border border-gray-300 rounded" required>
+      </div>
+      <div class="form-group">
+        <label for="location" class="block text-gray-700">Localisation</label>
+        <input type="text" id="location" class="w-full p-2 border border-gray-300 rounded" required>
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 disabled:bg-gray-400">
+        Publier
+      </button>
+    </form>
+
+    <h3 class="text-xl font-semibold mb-4">Profils des candidats</h3>
+    <ul>
+      <li  class="mb-4 p-4 border rounded">
+        <h4 class="text-lg font-bold">Haddoudi abdelkarim</h4>
+        <p class="text-gray-700">email</p>
+        <p class="text-gray-500">java python</p>
+      </li>
+      <li  class="mb-4 p-4 border rounded">
+        <h4 class="text-lg font-bold">Haddoudi abdelkarim</h4>
+        <p class="text-gray-700">email</p>
+        <p class="text-gray-500">java python</p>
+      </li>
+      <li  class="mb-4 p-4 border rounded">
+        <h4 class="text-lg font-bold">Haddoudi abdelkarim</h4>
+        <p class="text-gray-700">email</p>
+        <p class="text-gray-500">java python</p>
+      </li>
+    </ul>
+  </div>
+</div>

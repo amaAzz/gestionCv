@@ -10,6 +10,8 @@ import { JobListComponent } from './job-list/job-list.component';
 import { JobDetailComponent } from './job-detail/job-detail.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CompanyComponent } from './company/company.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,11 +22,14 @@ import { CompanyComponent } from './company/company.component';
     JobListComponent,
     JobDetailComponent,
     ProfileComponent,
-    CompanyComponent
+    CompanyComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
