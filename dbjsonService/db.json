@@ -1,0 +1,92 @@
+{
+  "candidate": [
+    {
+      "name": "haddoudi",
+      "prenom": "ABDELKARIM",
+      "password": "test@gmail.com",
+      "email": "Ahaddoudi74@gmail.com",
+      "phone": "0767148455",
+      "github": "https://github.com/johndoe",
+      "linkedin": "https://github.com/johndoe",
+      "twitter": "https://twitter.com/johndoe",
+      "website": "https://johndoe.com",
+      "country": "Maroc",
+      "city": "TINGHIR",
+      "summary": "A passionate software engineer with over 5 years of experience in developing scalable web applications. Skilled in JavaScript, React, Node.js, and MongoDB.",
+      "competence": [
+        {
+          "name": "C++",
+          "neveau": "debutant"
+        },
+        {
+          "name": "Java",
+          "neveau": "debutant"
+        }
+      ],
+      "certifications": [],
+      "experience": [],
+      "hobbies": [],
+      "education": [],
+      "projects": [],
+      "publications": [],
+      "languages": [],
+      "id": "1"
+    },
+    {
+      "id": "f2e1",
+      "name": "HADDOUDI",
+      "prenom": "ABDELKARIM",
+      "password": "12345",
+      "email": "Ahaddoudi74@gmail.com",
+      "phone": "0767148455",
+      "github": "https://github.com/johndoe",
+      "linkedin": "https://github.com/johndoe",
+      "twitter": "jgvhchf",
+      "website": "https://johndoe.com",
+      "country": "Maroc",
+      "city": "TINGHIR",
+      "summary": "lk,ll",
+      "competence": [],
+      "certifications": [],
+      "experience": [],
+      "hobbies": [],
+      "education": [],
+      "projects": [],
+      "publications": [],
+      "languages": []
+    },
+    {
+      "id": "7730",
+      "name": "HADDOUDI",
+      "prenom": "ABDELKARIM",
+      "password": "test@gmail.com",
+      "email": "test@gmail.com",
+      "phone": "0767148455",
+      "github": "https://github.com/johndoe",
+      "linkedin": "jbhhjvh",
+      "twitter": "jgvhchf",
+      "website": "https://johndoe.com",
+      "country": "Maroc",
+      "city": "TINGHIR",
+      "summary": "",
+      "competence": [
+        {
+          "name": "java",
+          "neveau": "debutant"
+        }
+      ],
+      "certifications": [],
+      "experience": [],
+      "hobbies": [],
+      "education": [],
+      "projects": [],
+      "publications": [],
+      "languages": [
+        {
+          "language": "farncais",
+          "proficiency": "debutant"
+        }
+      ]
+    }
+  ]
+}
