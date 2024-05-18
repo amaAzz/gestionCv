@@ -1,0 +1,175 @@
+<!-- src/app/complete-profile/complete-profile.component.html -->
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-lg bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-semibold text-center mb-4">Complete Your Profile</h2>
+    <form [formGroup]="completeProfileForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label class="block text-gray-700">Nom</label>
+        <input formControlName="nom" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Prénom</label>
+        <input formControlName="prenom" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">summary</label>
+        <input formControlName="summary" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">phone</label>
+        <input formControlName="summary" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">GitHub</label>
+        <input formControlName="github" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">LinkedIn</label>
+        <input formControlName="linkedin" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">phone</label>
+        <input formControlName="phone" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">country</label>
+        <input formControlName="country" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">City</label>
+        <input formControlName="city" type="text" class="w-full px-3 py-2 border rounded" />
+      </div>
+      <div class="form-group mb-4" >
+        <label >Compétences:</label>
+        <div formArrayName="skills" id="c">
+          <div *ngFor="let skills of skills.controls; let i = index" [formGroupName]="i" >
+            <label for="nameCom" class="block text-gray-700">name</label>
+            <input type="text" class="w-full px-3 py-2 border rounded" formControlName="name" id="nameCom">
+            <button type="button" (click)="removeSkills(i)">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" (click)="addskills()">Ajouter Compétence</button>
+      </div>
+
+      <div class="form-group">
+        <label >Certifications:</label>
+        <div formArrayName="certifications">
+          <div *ngFor="let certification of certifications.controls; let i = index" [formGroupName]="i">
+            <label for="nameCer">name</label>
+            <input type="text" id="nameCer" class="form-control" formControlName="name">
+            <label for="dateCert"></label>
+            <input type="text" id="dateCert" class="form-control" formControlName="date">
+            <button type="button" (click)="removeCertification(i)">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" (click)="addCertification()">Ajouter Certification</button>
+      </div>
+
+      <div class="form-group">
+        <label >Expérience:</label>
+        <div formArrayName="experience">
+          <div *ngFor="let experience of experience.controls; let i = index" [formGroupName]="i">
+            <label for="title">title</label>
+            <input type="text" class="form-control" formControlName="title" id="title">
+            <label for="company">company</label>
+            <input type="text" class="form-control" formControlName="company" id="company">
+            <label for="dates">dates</label>
+            <input type="text" class="form-control" formControlName="dates" id="dates">
+            <label for="location">location</label>
+            <input type="text" class="form-control" formControlName="location" id="location">
+            <label for="description">description</label>
+            <textarea class="form-control" rows="3" formControlName="description" id="description"></textarea>
+            <button type="button" (click)="removeExperience(i)">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" (click)="addExperience()">Ajouter Expérience</button>
+      </div>
+
+      <div class="form-group">
+        <label >Hobbies:</label>
+        <div formArrayName="hobbies">
+          <div *ngFor="let hobby of hobbies.controls; let i = index" [formGroupName]="i">
+            <label for="hobby">hobby</label>
+            <input type="text" class="form-control" formControlName="hobby" id="hobby">
+            <label for="descriptionHob">description</label>
+            <textarea class="form-control" rows="2" formControlName="description" id="descriptionHob"></textarea>
+            <button type="button" (click)="removeHobby(i)">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" (click)="addHobby()">Ajouter Hobby</button>
+      </div>
+
+      <div class="form-group">
+        <label >Éducation:</label>
+        <div formArrayName="education">
+          <div *ngFor="let education of education.controls; let i = index" [formGroupName]="i">
+            <label for="degree">degree</label>
+            <input type="text" class="form-control" formControlName="degree" id="degree">
+            <label for="institution">institution"</label>
+            <input type="text" class="form-control" formControlName="institution" id="institution">
+            <label for="datesEdu">dates</label>
+            <input type="text" class="form-control" formControlName="dates" id="datesEdu">
+            <label for="locationEdu">location</label>
+            <input type="text" class="form-control" formControlName="location" id="locationEdu">
+            <button type="button" (click)="removeEducation(i)">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" (click)="addEducation()">Ajouter Éducation</button>
+      </div>
+
+
+
+
+      <div class="form-group">
+        <label >Projets:</label>
+        <div formArrayName="projects">
+          <div *ngFor="let project of projects.controls; let i = index" [formGroupName]="i">
+            <label for="titlePro">title</label>
+            <input type="text" class="form-control" formControlName="title" id="titlePro">
+            <label for="descriptionPro">description</label>
+            <textarea class="form-control" rows="2" formControlName="description" id="descriptionPro"></textarea>
+            <label for="technologies">technologies</label>
+            <input type="text" class="form-control" formControlName="technologies" id="technologies">
+            <button type="button" (click)="removeProject(i)">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" (click)="addProject()">Ajouter Projet</button>
+      </div>
+
+      <div class="form-group">
+        <label >Publications:</label>
+        <div formArrayName="publications">
+          <div *ngFor="let publication of publications.controls; let i = index" [formGroupName]="i">
+            <label for="titlePub">title</label>
+            <input type="text" class="form-control" formControlName="title" id="titlePub">
+            <label for="publication">Publication</label>
+            <input type="text" class="form-control" formControlName="publication" id="publication">
+            <label for="year">year</label>
+            <input type="text" class="form-control" formControlName="year" id="year">
+            <button type="button" (click)="removePublication(i)">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" (click)="addPublication()">Ajouter Publication</button>
+      </div>
+
+      <div class="form-group">
+        <label >Langues:</label>
+        <div formArrayName="languages">
+          <div *ngFor="let language of languages.controls; let i = index" [formGroupName]="i">
+            <label for="language">Langues</label>
+            <input type="text" class="form-control" formControlName="language" id="language">
+            <label for="proficiency">proficiency</label>
+            <input type="text" class="form-control" formControlName="proficiency" id="proficiency">
+            <button type="button" (click)="removeLanguage(i)" class="bg-red-500 text-white px-4 py-2 rounded">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" (click)="addLanguage()" class="bg-yellow-500 text-white px-4 py-2 rounded">Ajouter Langue</button>
+      </div>
+
+      <div *ngIf="error" class="text-red-500 mb-4">{{ error }}</div>
+      <div class="flex justify-between items-center">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Complete Profile</button>
+      </div>
+    </form>
+  </div>
+</div>

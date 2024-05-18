@@ -7,15 +7,18 @@ import { JobListComponent } from './job-list/job-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { JobDetailComponent } from './job-detail/job-detail.component';
 import { CompanyComponent } from './company/company.component';
+import {CompleteProfileComponent} from "./complete-profile/complete-profile.component";
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {path:'home',component:HomeComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'profile/:id', component: ProfileComponent },
   { path: 'jobs', component: JobListComponent },
   { path: 'jobs/:id', component: JobDetailComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'company', component: CompanyComponent }
+  { path: 'company', component: CompanyComponent },
+  { path: 'complete-profile/:id', component: CompleteProfileComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
