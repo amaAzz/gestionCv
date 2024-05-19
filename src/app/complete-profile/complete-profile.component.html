@@ -1,175 +1,149 @@
-<!-- src/app/complete-profile/complete-profile.component.html -->
-<div class="flex justify-center items-center min-h-screen bg-gray-100">
-  <div class="w-full max-w-lg bg-white rounded-lg shadow-md p-6">
-    <h2 class="text-2xl font-semibold text-center mb-4">Complete Your Profile</h2>
+<div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-teal-600 to-gray-800">
+  <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-3xl font-bold text-center text-teal-600 mb-8">Complete Your Profile</h2>
     <form [formGroup]="completeProfileForm" (ngSubmit)="onSubmit()">
-      <div class="mb-4">
-        <label class="block text-gray-700">Nom</label>
-        <input formControlName="nom" type="text" class="w-full px-3 py-2 border rounded" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Nom</label>
+          <input formControlName="nom" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Prénom</label>
+          <input formControlName="prenom" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Summary</label>
+          <input formControlName="summary" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Phone</label>
+          <input formControlName="phone" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">GitHub</label>
+          <input formControlName="github" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">LinkedIn</label>
+          <input formControlName="linkedin" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Country</label>
+          <input formControlName="country" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">City</label>
+          <input formControlName="city" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+        </div>
       </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">Prénom</label>
-        <input formControlName="prenom" type="text" class="w-full px-3 py-2 border rounded" />
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">summary</label>
-        <input formControlName="summary" type="text" class="w-full px-3 py-2 border rounded" />
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">phone</label>
-        <input formControlName="summary" type="text" class="w-full px-3 py-2 border rounded" />
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">GitHub</label>
-        <input formControlName="github" type="text" class="w-full px-3 py-2 border rounded" />
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">LinkedIn</label>
-        <input formControlName="linkedin" type="text" class="w-full px-3 py-2 border rounded" />
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">phone</label>
-        <input formControlName="phone" type="text" class="w-full px-3 py-2 border rounded" />
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">country</label>
-        <input formControlName="country" type="text" class="w-full px-3 py-2 border rounded" />
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">City</label>
-        <input formControlName="city" type="text" class="w-full px-3 py-2 border rounded" />
-      </div>
-      <div class="form-group mb-4" >
-        <label >Compétences:</label>
-        <div formArrayName="skills" id="c">
-          <div *ngFor="let skills of skills.controls; let i = index" [formGroupName]="i" >
-            <label for="nameCom" class="block text-gray-700">name</label>
-            <input type="text" class="w-full px-3 py-2 border rounded" formControlName="name" id="nameCom">
-            <button type="button" (click)="removeSkills(i)">Supprimer</button>
+
+      <div class="mt-8">
+        <h3 class="text-xl font-bold text-teal-600 mb-4">Skills</h3>
+        <div formArrayName="skills" id="c" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div *ngFor="let skills of skills.controls; let i = index" [formGroupName]="i" class="flex items-center">
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="name" id="nameCom" placeholder="Enter skill name" />
+            <button type="button" (click)="removeSkills(i)" class="ml-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
           </div>
         </div>
-        <button type="button" (click)="addskills()">Ajouter Compétence</button>
+        <button type="button" (click)="addskills()" class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Add Skill</button>
       </div>
 
-      <div class="form-group">
-        <label >Certifications:</label>
-        <div formArrayName="certifications">
-          <div *ngFor="let certification of certifications.controls; let i = index" [formGroupName]="i">
-            <label for="nameCer">name</label>
-            <input type="text" id="nameCer" class="form-control" formControlName="name">
-            <label for="dateCert"></label>
-            <input type="text" id="dateCert" class="form-control" formControlName="date">
-            <button type="button" (click)="removeCertification(i)">Supprimer</button>
+      <div class="mt-8">
+        <h3 class="text-xl font-bold text-teal-600 mb-4">Certifications</h3>
+        <div formArrayName="certifications" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div *ngFor="let certification of certifications.controls; let i = index" [formGroupName]="i" class="flex items-center">
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="name" id="nameCer" placeholder="Enter certification name" />
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="date" id="dateCert" placeholder="Enter date" />
+            <button type="button" (click)="removeCertification(i)" class="ml-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
           </div>
         </div>
-        <button type="button" (click)="addCertification()">Ajouter Certification</button>
+        <button type="button" (click)="addCertification()" class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Add Certification</button>
       </div>
 
-      <div class="form-group">
-        <label >Expérience:</label>
-        <div formArrayName="experience">
-          <div *ngFor="let experience of experience.controls; let i = index" [formGroupName]="i">
-            <label for="title">title</label>
-            <input type="text" class="form-control" formControlName="title" id="title">
-            <label for="company">company</label>
-            <input type="text" class="form-control" formControlName="company" id="company">
-            <label for="dates">dates</label>
-            <input type="text" class="form-control" formControlName="dates" id="dates">
-            <label for="location">location</label>
-            <input type="text" class="form-control" formControlName="location" id="location">
-            <label for="description">description</label>
-            <textarea class="form-control" rows="3" formControlName="description" id="description"></textarea>
-            <button type="button" (click)="removeExperience(i)">Supprimer</button>
+      <div class="mt-8">
+        <h3 class="text-xl font-bold text-teal-600 mb-4">Experience</h3>
+        <div formArrayName="experience" class="grid grid-cols-1 gap-4">
+          <div *ngFor="let experience of experience.controls; let i = index" [formGroupName]="i" class="flex flex-col">
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="title" id="title" placeholder="Enter title" />
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="company" id="company" placeholder="Enter company"/>
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="dates" id="dates" placeholder="Enter dates" />
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="location" id="location" placeholder="Enter location" />
+            <textarea class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" rows="3" formControlName="description" id="description" placeholder="Enter description"></textarea>
+            <button type="button" (click)="removeExperience(i)" class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
           </div>
         </div>
-        <button type="button" (click)="addExperience()">Ajouter Expérience</button>
+        <button type="button" (click)="addExperience()" class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Add Experience</button>
       </div>
 
-      <div class="form-group">
-        <label >Hobbies:</label>
-        <div formArrayName="hobbies">
-          <div *ngFor="let hobby of hobbies.controls; let i = index" [formGroupName]="i">
-            <label for="hobby">hobby</label>
-            <input type="text" class="form-control" formControlName="hobby" id="hobby">
-            <label for="descriptionHob">description</label>
-            <textarea class="form-control" rows="2" formControlName="description" id="descriptionHob"></textarea>
-            <button type="button" (click)="removeHobby(i)">Supprimer</button>
+      <div class="mt-8">
+        <h3 class="text-xl font-bold text-teal-600 mb-4">Hobbies</h3>
+        <div formArrayName="hobbies" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div *ngFor="let hobby of hobbies.controls; let i = index" [formGroupName]="i" class="flex flex-col">
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="hobby" id="hobby" placeholder="Enter hobby" />
+            <textarea class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" rows="2" formControlName="description" id="descriptionHob" placeholder="Enter description"></textarea>
+            <button type="button" (click)="removeHobby(i)" class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
           </div>
         </div>
-        <button type="button" (click)="addHobby()">Ajouter Hobby</button>
+        <button type="button" (click)="addHobby()" class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Add Hobby</button>
       </div>
 
-      <div class="form-group">
-        <label >Éducation:</label>
-        <div formArrayName="education">
-          <div *ngFor="let education of education.controls; let i = index" [formGroupName]="i">
-            <label for="degree">degree</label>
-            <input type="text" class="form-control" formControlName="degree" id="degree">
-            <label for="institution">institution"</label>
-            <input type="text" class="form-control" formControlName="institution" id="institution">
-            <label for="datesEdu">dates</label>
-            <input type="text" class="form-control" formControlName="dates" id="datesEdu">
-            <label for="locationEdu">location</label>
-            <input type="text" class="form-control" formControlName="location" id="locationEdu">
-            <button type="button" (click)="removeEducation(i)">Supprimer</button>
+      <div class="mt-8">
+        <h3 class="text-xl font-bold text-teal-600 mb-4">Education</h3>
+        <div formArrayName="education" class="grid grid-cols-1 gap-4">
+          <div *ngFor="let education of education.controls; let i = index" [formGroupName]="i" class="flex flex-col">
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="degree" id="degree" placeholder="Enter degree" />
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="institution" id="institution" placeholder="Enter institution" />
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="dates" id="datesEdu" placeholder="Enter dates" />
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="location" id="locationEdu" placeholder="Enter location" />
+            <button type="button" (click)="removeEducation(i)" class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
           </div>
         </div>
-        <button type="button" (click)="addEducation()">Ajouter Éducation</button>
+        <button type="button" (click)="addEducation()" class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Add Education</button>
       </div>
 
-
-
-
-      <div class="form-group">
-        <label >Projets:</label>
-        <div formArrayName="projects">
-          <div *ngFor="let project of projects.controls; let i = index" [formGroupName]="i">
-            <label for="titlePro">title</label>
-            <input type="text" class="form-control" formControlName="title" id="titlePro">
-            <label for="descriptionPro">description</label>
-            <textarea class="form-control" rows="2" formControlName="description" id="descriptionPro"></textarea>
-            <label for="technologies">technologies</label>
-            <input type="text" class="form-control" formControlName="technologies" id="technologies">
-            <button type="button" (click)="removeProject(i)">Supprimer</button>
+      <div class="mt-8">
+        <h3 class="text-xl font-bold text-teal-600 mb-4">Projects</h3>
+        <div formArrayName="projects" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div *ngFor="let project of projects.controls; let i = index" [formGroupName]="i" class="flex flex-col">
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="title" id="titlePro" placeholder="Enter project title" />
+            <textarea class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" rows="2" formControlName="description" id="descriptionPro" placeholder="Enter description"></textarea>
+            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="technologies" id="technologies" placeholder="Enter technologies used" />
+            <button type="button" (click)="removeProject(i)" class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
           </div>
         </div>
-        <button type="button" (click)="addProject()">Ajouter Projet</button>
+        <button type="button" (click)="addProject()" class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Add Project</button>
       </div>
 
-      <div class="form-group">
-        <label >Publications:</label>
-        <div formArrayName="publications">
-          <div *ngFor="let publication of publications.controls; let i = index" [formGroupName]="i">
-            <label for="titlePub">title</label>
-            <input type="text" class="form-control" formControlName="title" id="titlePub">
-            <label for="publication">Publication</label>
-            <input type="text" class="form-control" formControlName="publication" id="publication">
-            <label for="year">year</label>
-            <input type="text" class="form-control" formControlName="year" id="year">
-            <button type="button" (click)="removePublication(i)">Supprimer</button>
-          </div>
+      <div class="mt-8">
+        <h3 class="text-xl font-bold text-teal-600 mb-4">Publications</h3>
+       <div formArrayName="publications" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div *ngFor="let publication of publications.controls; let i = index" [formGroupName]="i" class="flex flex-col">
+          <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="title" id="titlePub" placeholder="Enter publication title" />
+          <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="publication" id="publication" placeholder="Enter publication name" />
+          <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent mt-2" formControlName="year" id="year" placeholder="Enter year" />
+          <button type="button" (click)="removePublication(i)" class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
         </div>
-        <button type="button" (click)="addPublication()">Ajouter Publication</button>
       </div>
-
-      <div class="form-group">
-        <label >Langues:</label>
-        <div formArrayName="languages">
-          <div *ngFor="let language of languages.controls; let i = index" [formGroupName]="i">
-            <label for="language">Langues</label>
-            <input type="text" class="form-control" formControlName="language" id="language">
-            <label for="proficiency">proficiency</label>
-            <input type="text" class="form-control" formControlName="proficiency" id="proficiency">
-            <button type="button" (click)="removeLanguage(i)" class="bg-red-500 text-white px-4 py-2 rounded">Supprimer</button>
-          </div>
-        </div>
-        <button type="button" (click)="addLanguage()" class="bg-yellow-500 text-white px-4 py-2 rounded">Ajouter Langue</button>
-      </div>
-
-      <div *ngIf="error" class="text-red-500 mb-4">{{ error }}</div>
-      <div class="flex justify-between items-center">
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Complete Profile</button>
-      </div>
-    </form>
+      <button type="button" (click)="addPublication()" class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Add Publication</button>
   </div>
+
+  <div class="mt-8">
+    <h3 class="text-xl font-bold text-teal-600 mb-4">Languages</h3>
+    <div formArrayName="languages" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div *ngFor="let language of languages.controls; let i = index" [formGroupName]="i" class="flex items-center">
+        <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="language" id="language" placeholder="Enter language" />
+        <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="proficiency" id="proficiency" placeholder="Enter proficiency level" />
+        <button type="button" (click)="removeLanguage(i)" class="ml-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
+      </div>
+    </div>
+    <button type="button" (click)="addLanguage()" class="mt-4 bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50">Add Language</button>
+  </div>
+
+  <div *ngIf="error" class="text-red-500 mb-4">{{ error }}</div>
+  <div class="flex justify-end">
+    <button type="submit" class="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Complete Profile</button>
+  </div>
+</form>
 </div>
+</div>
+

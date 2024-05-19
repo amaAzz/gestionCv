@@ -1,96 +1,114 @@
-<div *ngIf="candidate" class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg">
-  <div class="text-center">
-    <h1 class="text-4xl font-bold">{{ candidate.nom }} {{ candidate.prenom }}</h1>
-    <p class="text-xl text-gray-600">{{ candidate.summary }}</p>
-  </div>
+<div *ngIf="candidate" class="bg-gradient-to-r from-teal-600 to-gray-800 min-h-screen">
+  <div class="max-w-6xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Contact Information</h2>
-    <ul class="mt-4 text-gray-700">
-      <li>Email: <a href="mailto:{{ candidate.email }}" class="text-blue-600">{{ candidate.email }}</a></li>
-      <li>GitHub: <a href="https://github.com/{{ candidate.github }}" class="text-blue-600">{{ candidate.github }}</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/{{ candidate.linkedin }}" class="text-blue-600">{{ candidate.linkedin }}</a></li>
+      <div class="absolute top-0 left-0 p-8">
+        <div class="bg-white bg-opacity-80 rounded-lg p-4 shadow-md">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-800">{{ candidate.nom }} {{ candidate.prenom }}</h1>
+        </div>
+      </div>
 
-      <li>Location: {{ candidate.city }}, {{ candidate.country }}</li>
-    </ul>
-  </div>
+    <div class="text-center p-8">
+      <div class="flex flex-col md:flex-row items-center mb-10">
+        <div class="md:flex-grow">
+          <h2 class="text-3xl bg-sky-600 font-semibold text-gray-800 mb-2">Contact Information</h2>
+          <ul class="text-gray-700 space-y-2">
+            <li>Email: <a [href]="'mailto:' + candidate.email" class="text-teal-600 hover:underline">{{ candidate.email }}</a></li>
+            <li>GitHub: <a [href]="'https://github.com/' + candidate.github" class="text-teal-600 hover:underline" target="_blank">{{ candidate.github }}</a></li>
+            <li>LinkedIn: <a [href]="'https://linkedin.com/in/' + candidate.linkedin" class="text-teal-600 hover:underline" target="_blank">{{ candidate.linkedin }}</a></li>
+            <li>Location: {{ candidate.city }}, {{ candidate.country }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Skills</h2>
-    <ul class="mt-4 list-disc list-inside text-gray-700">
-      <li *ngFor="let skill of candidate.skills">
-        {{ skill.name }}
-      </li>
-    </ul>
-  </div>
+    <div class="bg-gray-100 p-8 rounded-t-3xl">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">PROFILE</h2>
+      <p class="text-lg md:text-xl text-gray-700 text-center">{{ candidate.summary }}</p>
+    </div>
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Certifications</h2>
-    <ul class="mt-4 list-disc list-inside text-gray-700">
-      <li *ngFor="let cert of candidate.certifications">
-        {{ cert.name }} ({{ cert.date }})
-      </li>
-    </ul>
-  </div>
+    <div class="p-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Skills</h2>
+          <div class="flex flex-wrap">
+            <span *ngFor="let skill of candidate.skills" class="bg-teal-200 text-teal-800 rounded-full px-4 py-2 mr-2 mb-2">{{ skill.name }}</span>
+          </div>
+        </div>
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Experience</h2>
-    <ul class="mt-4 list-none text-gray-700">
-      <li *ngFor="let exp of candidate.experience" class="mb-4">
-        <strong class="text-xl">{{ exp.title }}</strong> at {{ exp.company }} ({{ exp.dates }})
-        <p class="text-gray-600">{{ exp.location }}</p>
-        <p>{{ exp.description }}</p>
-      </li>
-    </ul>
-  </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Certifications</h2>
+          <div class="space-y-4">
+            <div *ngFor="let cert of candidate.certifications" class="bg-gray-100 rounded-lg p-4">
+              <h3 class="text-lg font-semibold">{{ cert.name }}</h3>
+              <p class="text-gray-600">{{ cert.date }}</p>
+            </div>
+          </div>
+        </div>
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Education</h2>
-    <ul class="mt-4 list-none text-gray-700">
-      <li *ngFor="let edu of candidate.education" class="mb-4">
-        <strong class="text-xl">{{ edu.degree }}</strong> from {{ edu.institution }} ({{ edu.dates }})
-        <p class="text-gray-600">{{ edu.location }}</p>
-      </li>
-    </ul>
-  </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Languages</h2>
+          <div class="space-y-4">
+            <div *ngFor="let lang of candidate.languages" class="bg-gray-100 rounded-lg p-4">
+              <h3 class="text-lg font-semibold">{{ lang.language }}</h3>
+              <p class="text-gray-600">{{ lang.proficiency }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Projects</h2>
-    <ul class="mt-4 list-none text-gray-700">
-      <li *ngFor="let project of candidate.projects" class="mb-4">
-        <strong class="text-xl">{{ project.title }}</strong>
-        <p>{{ project.description }}</p>
-        <p class="text-gray-600">Technologies: {{ project.technologies.join(', ') }}</p>
-      </li>
-    </ul>
-  </div>
+    <div class="p-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Experience</h2>
+      <div class="space-y-6">
+        <div *ngFor="let exp of candidate.experience" class="bg-white rounded-lg p-8 shadow-md">
+          <h3 class="text-2xl font-semibold">{{ exp.title }} at {{ exp.company }}</h3>
+          <p class="text-gray-600">{{ exp.dates }}</p>
+          <p class="text-gray-600">{{ exp.location }}</p>
+          <p class="mt-4">{{ exp.description }}</p>
+        </div>
+      </div>
+    </div>
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Publications</h2>
-    <ul class="mt-4 list-none text-gray-700">
-      <li *ngFor="let pub of candidate.publications" class="mb-4">
-        <strong class="text-xl">{{ pub.title }}</strong> ({{ pub.year }})
-        <p>{{ pub.publication }}</p>
-      </li>
-    </ul>
-  </div>
+    <div class="p-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Education</h2>
+      <div class="space-y-6">
+        <div *ngFor="let edu of candidate.education" class="bg-white rounded-lg p-8 shadow-md">
+          <h3 class="text-2xl font-semibold">{{ edu.degree }}</h3>
+          <p class="text-gray-600">{{ edu.institution }} ({{ edu.dates }})</p>
+          <p class="text-gray-600">{{ edu.location }}</p>
+        </div>
+      </div>
+    </div>
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Languages</h2>
-    <ul class="mt-4 list-disc list-inside text-gray-700">
-      <li *ngFor="let lang of candidate.languages">
-        {{ lang.language }} ({{ lang.proficiency }})
-      </li>
-    </ul>
-  </div>
+    <div class="p-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Projects</h2>
+      <div class="space-y-6">
+        <div *ngFor="let project of candidate.projects" class="bg-white rounded-lg p-8 shadow-md">
+          <h3 class="text-2xl font-semibold">{{ project.title }}</h3>
+          <p class="mt-4">{{ project.description }}</p>
+          <p class="text-gray-600">Technologies: {{ project.technologies.join(', ') }}</p>
+        </div>
+      </div>
+    </div>
 
-  <div class="mt-8">
-    <h2 class="text-2xl font-semibold text-gray-800">Hobbies</h2>
-    <ul class="mt-4 list-disc list-inside text-gray-700">
-      <li *ngFor="let hobby of candidate.hobbies">
-        {{ hobby.hobby }}: {{ hobby.description }}
-      </li>
-    </ul>
+    <div class="p-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Publications</h2>
+      <div class="space-y-6">
+        <div *ngFor="let pub of candidate.publications" class="bg-white rounded-lg p-8 shadow-md">
+          <h3 class="text-2xl font-semibold">{{ pub.title }} ({{ pub.year }})</h3>
+          <p class="text-gray-600">{{ pub.publication }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Hobbies</h2>
+      <div class="space-y-6">
+        <div *ngFor="let hobby of candidate.hobbies" class="bg-white rounded-lg p-8 shadow-md">
+          <h3 class="text-2xl font-semibold">{{ hobby.hobby }}</h3>
+          <p class="mt-4">{{ hobby.description }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-

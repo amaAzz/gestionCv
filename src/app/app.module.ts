@@ -18,6 +18,8 @@ import { CompleteCompanyComponent } from './complete-company/complete-company.co
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
 import { RegistreCondidatComponent } from './registre-condidat/registre-condidat.component';
 import { RegistreCompanyComponent } from './registre-company/registre-company.component';
+import { CompanyNavbarComponent } from './company-navbar/company-navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { RegistreCompanyComponent } from './registre-company/registre-company.co
     CompanyProfileComponent,
     RegistreCondidatComponent,
     RegistreCompanyComponent,
+    CompanyNavbarComponent,
 
   ],
   imports: [

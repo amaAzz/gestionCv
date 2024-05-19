@@ -124,6 +124,35 @@
       "role": "candidate",
       "candidateId": "rIbdKbx",
       "id": "vcZVfzz"
+    },
+    {
+      "username": "Hamza azzab",
+      "password": "hamza",
+      "role": "candidate",
+      "candidateId": "pGlIWAY",
+      "id": "j9DFPEV"
+    },
+    {
+      "username": "hamza maliki",
+      "password": "nuttertools",
+      "role": "candidate",
+      "candidateId": "_0gEzcg",
+      "id": "LqYGL3v"
+    },
+    {
+      "username": "Hamza azzab",
+      "password": "yess",
+      "role": "candidate",
+      "candidateId": "MBSM8tK",
+      "id": "DfFqrxN"
+    },
+    {
+      "username": "hp",
+      "password": "hp",
+      "email": "hp@gmail.com",
+      "companyId": "xEqqzrs",
+      "role": "company",
+      "id": "cpSfKmi"
     }
   ],
   "companies": [
@@ -229,6 +258,15 @@
       "phone": "0767148455",
       "linkedin": "haddd",
       "id": "0YCApJ9"
+    },
+    {
+      "name": "HP",
+      "description": "Entreprise kat nsseb ela nasse",
+      "location": "google chrome",
+      "email": "hamza.azzab@emsi-edu.ma",
+      "phone": "0657147321",
+      "linkedin": "google",
+      "id": "xEqqzrs"
     }
   ],
   "applications": [
@@ -400,10 +438,10 @@
     },
     {
       "id": "2",
-      "name": "haddoudi",
-      "prenom": "abdelkarim",
-      "email": "john.doe@example.com",
-      "phone": "+1234567890",
+      "name": "AZZAB",
+      "prenom": "HAMZA",
+      "email": "hamzaa.azzab@example.com",
+      "phone": "+21265844784",
       "github": "https://github.com/johndoe",
       "linkedin": "https://linkedin.com/in/johndoe",
       "twitter": "https://twitter.com/johndoe",
@@ -711,6 +749,15 @@
       "country": "Maroc",
       "city": "TINGHIR",
       "id": "rIbdKbx"
+    },
+    {
+      "id": "pGlIWAY"
+    },
+    {
+      "id": "_0gEzcg"
+    },
+    {
+      "id": "MBSM8tK"
     }
   ]
 }
