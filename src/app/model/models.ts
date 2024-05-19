@@ -1,5 +1,3 @@
-
-
 export interface User {
   id: number
   username: string
@@ -11,7 +9,6 @@ export interface User {
 
 export interface Company {
   id: number
-  name: number
   description: string
   location: string
   jobs: Job[]
@@ -24,7 +21,6 @@ export interface Job {
   description: string
   skills: string[]
   location: string
-  idCompany:number
 }
 
 export interface Contact {
@@ -39,7 +35,6 @@ export interface Application {
   status: string
 }
 
-export interface Job {
   id: number
   title: string
   description: string
@@ -50,14 +45,12 @@ export interface Job {
 
 export interface Candidate {
   id: number
-  nom: string
   prenom: string
   password?: string
   email: string
   github: string
   linkedin: string
   summary: string
-  skills?: Skill[]
   certifications: Certification[]
   experience: Experience[]
   hobbies: Hobby[]
@@ -71,7 +64,6 @@ export interface Candidate {
 }
 
 
-export interface Skill{
   name: string
 }
 
@@ -116,5 +108,4 @@ export interface Language {
   language: string
   proficiency: string
 }
-
 
