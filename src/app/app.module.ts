@@ -13,6 +13,7 @@ import { CompanyComponent } from './company/company.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import { HeaderComponent } from './header/header.component';
+import { CompleteProfileComponent } from './complete-profile/complete-profile.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { HeaderComponent } from './header/header.component';
     ProfileComponent,
     CompanyComponent,
     HeaderComponent,
+    CompleteProfileComponent,
+
   ],
   imports: [
     BrowserModule,

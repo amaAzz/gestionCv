@@ -1,11 +1,3 @@
-export interface Root {
-  users: User[]
-  companies: Company[]
-  applications: Application[]
-  jobs: Job2[]
-  candidate: Candidate[]
-}
-
 export interface User {
   id: number
   username: string
@@ -17,7 +9,6 @@ export interface User {
 
 export interface Company {
   id: number
-  name: string
   description: string
   location: string
   jobs: Job[]
@@ -44,28 +35,15 @@ export interface Application {
   status: string
 }
 
-export interface Job2 {
-  id: number
-  title: string
-  description: string
-  skills: string[]
-  location: string
-  companyId: number
-}
-
 export interface Candidate {
   id: number
-  name: string
+  nom:string,
   prenom: string
   password?: string
   email: string
   github: string
   linkedin: string
-  twitter: string
-  website: string
-  location?: Location
   summary: string
-  competence?: Competence[]
   certifications: Certification[]
   experience: Experience[]
   hobbies: Hobby[]
@@ -75,18 +53,8 @@ export interface Candidate {
   languages: Language[]
   phone?: string
   country?: string
-  city?: string
-  compétence?: Comptence[]
-}
-
-export interface Location {
-  country: string
-  city: string
-}
-
-export interface Competence {
-  name: string
-  neveau: string
+  city?: string,
+  skills:skills[]
 }
 
 export interface Certification {
@@ -131,7 +99,7 @@ export interface Language {
   proficiency: string
 }
 
-export interface Comptence {
-  name: string
-  neveau: string
+export interface skills{
+  name:string
 }
+

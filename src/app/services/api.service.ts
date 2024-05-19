@@ -48,4 +48,21 @@ export class ApiService {
   addApplication(application: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/applications`, application);
   }
+
+  register(user: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/users`, user);
+  }
+
+  addCandidateProfile(candidateProfile: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/candidates`, candidateProfile);
+  }
+
+  completeCandidateProfile(candidateProfile: any,id:string): Observable<any> {
+    return this.http.put(`${this.baseUrl}/candidates/`+id, candidateProfile);
+  }
+
+  getCandidate(candidateId: number) : Observable<any> {
+    return this.http.get(`${this.baseUrl}/candidates/`+candidateId);
+
+  }
 }
