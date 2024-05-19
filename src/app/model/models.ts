@@ -9,10 +9,12 @@ export interface User {
 
 export interface Company {
   id: number
+  name:string
   description: string
   location: string
+  email:string
+  phone:string
   jobs: Job[]
-  contact: Contact
 }
 
 export interface Job {
@@ -36,7 +38,7 @@ export interface Application {
 }
 
 export interface Candidate {
-  id: number
+  id: number,
   nom:string,
   prenom: string
   password?: string

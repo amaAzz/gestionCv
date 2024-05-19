@@ -61,8 +61,24 @@ export class ApiService {
     return this.http.put(`${this.baseUrl}/candidates/`+id, candidateProfile);
   }
 
-  getCandidate(candidateId: number) : Observable<any> {
+  getCandidate(candidateId: string | undefined) : Observable<any> {
     return this.http.get(`${this.baseUrl}/candidates/`+candidateId);
+
+  }
+
+  addCompany(company: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/companies`,company);
+
+  }
+
+  completeCompany(company: any, companyId: string | undefined):Observable<any> {
+    return this.http.put(`${this.baseUrl}/companies/`+companyId, company);
+
+  }
+
+  getCompany(companyId: string | undefined):Observable<any> {
+    return this.http.get(`${this.baseUrl}/companies/`+companyId);
+
 
   }
 }

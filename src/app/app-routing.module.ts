@@ -8,6 +8,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { JobDetailComponent } from './job-detail/job-detail.component';
 import { CompanyComponent } from './company/company.component';
 import {CompleteProfileComponent} from "./complete-profile/complete-profile.component";
+import {CompleteCompanyComponent} from "./complete-company/complete-company.component";
+import {CompanyProfileComponent} from "./company-profile/company-profile.component";
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'jobs', component: JobListComponent },
   { path: 'jobs/:id', component: JobDetailComponent },
   { path: 'company', component: CompanyComponent },
+  { path: 'company/:id', component: CompanyProfileComponent},
   { path: 'complete-profile/:id', component: CompleteProfileComponent},
+  { path: 'complete-company/:id', component: CompleteCompanyComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
 @NgModule({

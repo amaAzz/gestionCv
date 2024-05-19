@@ -14,6 +14,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import { HeaderComponent } from './header/header.component';
 import { CompleteProfileComponent } from './complete-profile/complete-profile.component';
+import { CompleteCompanyComponent } from './complete-company/complete-company.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { CompleteProfileComponent } from './complete-profile/complete-profile.co
     CompanyComponent,
     HeaderComponent,
     CompleteProfileComponent,
+    CompleteCompanyComponent,
+    CompanyProfileComponent,
 
   ],
   imports: [

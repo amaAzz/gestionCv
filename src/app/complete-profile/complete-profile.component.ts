@@ -11,7 +11,7 @@ import { ApiService } from '../services/api.service';
 })
 export class CompleteProfileComponent {
   completeProfileForm: FormGroup;
-  candidateId ?: number;
+  candidateId ?:string;
   error: string | null = null;
 
   constructor(
@@ -41,7 +41,12 @@ export class CompleteProfileComponent {
   }
 
   ngOnInit(): void {
-    this.candidateId = +this.route.snapshot.paramMap.get('id')!;
+    this.candidateId=this.route.snapshot.paramMap.get('id')?.toString()
+    this.route.paramMap.subscribe(
+      (params: any) => {
+        console.log("in params", params.value);
+      })
+    console.log(this.candidateId)
   }
 
   onSubmit(): void {
@@ -49,7 +54,7 @@ export class CompleteProfileComponent {
     if (this.completeProfileForm.valid) {
       const profile = {
         ...this.completeProfileForm.value,
-        id: this.candidateId?.toString()
+        id: this.candidateId
       };
       console.log(profile)
       this.apiService.completeCandidateProfile(profile,profile.id).subscribe(

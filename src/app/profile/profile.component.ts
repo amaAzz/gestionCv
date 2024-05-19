@@ -9,17 +9,17 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-  candidateId ?: number;
+  candidateId ?: string | undefined;
   candidate?:Candidate
   constructor(
     private apiService:ApiService,
     private route: ActivatedRoute,
   ){}
   ngOnInit(): void {
-    this.candidateId = +this.route.snapshot.paramMap.get('id')!;
+    console.log(this.route.snapshot.paramMap.get('id'))
+    this.candidateId = this.route.snapshot.paramMap.get('id')?.toString();
     this.apiService.getCandidate(this.candidateId).subscribe(value =>
     this.candidate=value)
-
   }
 
 }
