@@ -37,6 +37,7 @@ export interface Application {
 
 export interface Candidate {
   id: number
+  nom:string,
   prenom: string
   password?: string
   email: string
@@ -53,7 +54,7 @@ export interface Candidate {
   phone?: string
   country?: string
   city?: string,
-  skills:[]
+  skills:skills[]
 }
 
 export interface Certification {
@@ -96,5 +97,9 @@ export interface Publication {
 export interface Language {
   language: string
   proficiency: string
+}
+
+export interface skills{
+  name:string
 }
 
