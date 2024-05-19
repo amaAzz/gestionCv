@@ -35,14 +35,6 @@ export interface Application {
   status: string
 }
 
-  id: number
-  title: string
-  description: string
-  skills: string[]
-  location: string
-  companyId: number
-}
-
 export interface Candidate {
   id: number
   prenom: string
@@ -60,11 +52,8 @@ export interface Candidate {
   languages: Language[]
   phone?: string
   country?: string
-  city?: string
-}
-
-
-  name: string
+  city?: string,
+  skills:[]
 }
 
 export interface Certification {
