@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import {Candidate} from '../model/models'
-import {FormBuilder} from "@angular/forms";
+
 import {ApiService} from "../services/api.service";
 import {ActivatedRoute, Router} from "@angular/router";
+
 @Component({
   selector: 'app-profile',
   templateUrl: 'profile.component.html',

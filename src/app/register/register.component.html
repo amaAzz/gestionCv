@@ -1,10 +1,10 @@
-
 <div class="flex justify-center min-h-screen bg-gradient-to-r from-teal-600 to-gray-800 text-white p-8">
-  <div class="flex justify-between items-center">
-    <div class="rounded-lg shadow-lg bg-blue-800 p-6 max-w-md">
-      <img src="assets/freelancer.png" alt="entreprise Image" class="w-20 h-20 justify-center" >
+  <div class="flex flex-col md:flex-row justify-center items-center">
+    <div class="rounded-lg shadow-lg bg-gradient-to-r from-teal-500 to-gray-400 p-6 max-w-md mb-8 md:mb-0 md:mr-4">
+      <div class="flex justify-center mb-4">
+        <img src="assets/freelancer.png" alt="entreprise Image" class="w-20 h-20">
+      </div>
       <div class="flex items-center justify-center mb-4">
-
         <h2 class="text-2xl font-bold">Je suis freelance</h2>
       </div>
       <p class="text-center mb-4">Je recherche une mission et je veux publier mon profil</p>
@@ -14,18 +14,16 @@
         <li>Partagez votre profil sur les réseaux sociaux</li>
       </ul>
       <div class="flex justify-center">
-        <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded" routerLink="/register/candidate">
+        <button class="bg-orange-500 hover:bg-sky-400 text-white font-bold py-2 px-4 rounded" routerLink="/register/candidate">
           Inscription Candidate
         </button>
       </div>
     </div>
 
-    <div class="relative">
-      <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg"></div>
-    </div>
-
-    <div class="rounded-lg shadow-lg bg-blue-800 p-6 max-w-md">
-      <img src="assets/entrepris.png" alt="entreprise Image" class="w-20 h-20 justify-center" >
+    <div class="rounded-lg shadow-lg bg-gradient-to-r from-gray-400 to-teal-500 p-6 max-w-md">
+      <div class="flex justify-center mb-4">
+        <img src="assets/entrepris.png" alt="entreprise Image" class="w-20 h-20">
+      </div>
       <div class="flex items-center justify-center mb-4">
         <h2 class="text-2xl font-bold">Je suis une entreprise</h2>
       </div>
@@ -36,7 +34,7 @@
         <li>Contactez directement les freelances</li>
       </ul>
       <div class="flex justify-center">
-        <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded" routerLink="/register/company">
+        <button class="bg-sky-400 hover:bg-sky-400 text-white font-bold py-2 px-4 rounded" routerLink="/register/company">
           Inscription Entreprise
         </button>
       </div>

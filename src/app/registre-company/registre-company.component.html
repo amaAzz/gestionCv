@@ -1,23 +1,35 @@
-<!-- src/app/complete-profile/complete-profile.component.html -->
-<div class="flex justify-center items-center min-h-screen bg-gray-100">
-  <div class="w-full max-w-lg bg-white rounded-lg shadow-md p-6">
-    <h2 class="text-2xl font-semibold text-center mb-4">Create company Profile</h2>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <div class="mb-4">
-        <label class="block text-gray-700">username</label>
-        <input formControlName="username" type="text" class="w-full px-3 py-2 border rounded" />
+<div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-teal-600 to-gray-800">
+  <div class="w-full max-w-md">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="shadow-2xl rounded-lg px-10 pt-8 pb-10 mb-4">
+      <div class="mb-6 text-center">
+        <label class="block text-white text-3xl font-bold mb-7">
+          Create company Profile
+        </label>
+
       </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">password</label>
-        <input formControlName="password" type="password" class="w-full px-3 py-2 border rounded" />
+      <div class="mb-8">
+        <label class="block text-white text-lg font-bold mb-2" for="username">
+          username
+        </label>
+        <input formControlName="username" type="text" id="username" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Username">
       </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">email</label>
-        <input formControlName="email" type="text" class="w-full px-3 py-2 border rounded" />
+      <div class="mb-8">
+        <label class="block text-white text-lg font-bold mb-2" for="password">
+          password
+        </label>
+        <input formControlName="password" id="password" type="password" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="********">
+      </div>
+      <div class="mb-8">
+        <label class="block text-white text-lg font-bold mb-2" for="email">
+          email
+        </label>
+        <input formControlName="email" id="email" type="text" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email">
       </div>
       <div *ngIf="error" class="text-red-500 mb-4">{{ error }}</div>
-      <div class="flex justify-between items-center">
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Complete Profile</button>
+      <div class="flex justify-center">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+          Complete Profile
+        </button>
       </div>
     </form>
   </div>
