@@ -1,33 +1,45 @@
-<!-- src/app/register/register.component.html -->
-<div class="flex justify-center items-center min-h-screen bg-gray-100">
-  <div class="w-full max-w-md bg-white rounded-lg shadow-md p-6">
-    <h2 class="text-2xl font-semibold text-center mb-4">Register</h2>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <div class="mb-4">
-        <label class="block text-gray-700">Username</label>
-        <input formControlName="username" type="text" class="w-full px-3 py-2 border rounded" />
+
+<div class="flex justify-center min-h-screen bg-gradient-to-r from-teal-600 to-gray-800 text-white p-8">
+  <div class="flex justify-between items-center">
+    <div class="rounded-lg shadow-lg bg-blue-800 p-6 max-w-md">
+      <img src="assets/freelancer.png" alt="entreprise Image" class="w-20 h-20 justify-center" >
+      <div class="flex items-center justify-center mb-4">
+
+        <h2 class="text-2xl font-bold">Je suis freelance</h2>
       </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">email</label>
-        <input formControlName="email" type="text" class="w-full px-3 py-2 border rounded" />
+      <p class="text-center mb-4">Je recherche une mission et je veux publier mon profil</p>
+      <ul class="list-disc mx-auto mb-4 max-w-xs">
+        <li>Inscription gratuite</li>
+        <li>Postulez facilement aux offres de mission en ligne</li>
+        <li>Partagez votre profil sur les réseaux sociaux</li>
+      </ul>
+      <div class="flex justify-center">
+        <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
+          Inscription Freelance
+        </button>
       </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">Password</label>
-        <input formControlName="password" type="password" class="w-full px-3 py-2 border rounded" />
+    </div>
+
+    <div class="relative">
+      <div class="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg"></div>
+    </div>
+
+    <div class="rounded-lg shadow-lg bg-blue-800 p-6 max-w-md">
+      <img src="assets/entrepris.png" alt="entreprise Image" class="w-20 h-20 justify-center" >
+      <div class="flex items-center justify-center mb-4">
+        <h2 class="text-2xl font-bold">Je suis une entreprise</h2>
       </div>
-      <div class="mb-4">
-        <label class="block text-gray-700">Role</label>
-        <select formControlName="role" class="w-full px-3 py-2 border rounded">
-          <option value="candidate">Candidate</option>
-          <option value="company">Company</option>
-        </select>
+      <p class="text-center mb-4">Je veux publier des offres de mission et contacter des freelances</p>
+      <ul class="list-disc mx-auto mb-4 max-w-xs">
+        <li>Publiez vos offres de mission</li>
+        <li>Consultez et sélectionnez des profils</li>
+        <li>Contactez directement les freelances</li>
+      </ul>
+      <div class="flex justify-center">
+        <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
+          Inscription Entreprise
+        </button>
       </div>
-      <div *ngIf="error" class="text-red-500 mb-4">{{ error }}</div>
-      <div class="flex justify-between items-center">
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Register</button>
-        <a routerLink="/login" class="text-blue-500">Already have an account? Login</a>
-      </div>
-    </form>
+    </div>
   </div>
 </div>
-
