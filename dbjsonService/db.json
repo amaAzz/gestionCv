@@ -87,6 +87,43 @@
       "role": "candidate",
       "candidateId": "Po0NiWx",
       "id": "04V4VDw"
+    },
+    {
+      "username": "company1",
+      "password": "test@gmail.com",
+      "role": "company",
+      "email": "test@gmail.com",
+      "companyId": "z3MhP_k",
+      "id": "P7cxqAW"
+    },
+    {
+      "username": "haddoudi",
+      "password": "test@gmail.com",
+      "role": "candidate",
+      "candidateId": "53DRSSs",
+      "id": "Tl2DF9m"
+    },
+    {
+      "username": "user1",
+      "password": "test@gmail.com",
+      "role": "candidate",
+      "candidateId": "p-Aqwyw",
+      "id": "VWZCIAT"
+    },
+    {
+      "username": "test@gmail.com",
+      "password": "test@gmail.com",
+      "email": "Ahaddoudi74@gmail.com",
+      "companyId": "0YCApJ9",
+      "role": "company",
+      "id": "UK5Wol3"
+    },
+    {
+      "username": "test@gmail.com",
+      "password": "test@gmail.com",
+      "role": "candidate",
+      "candidateId": "rIbdKbx",
+      "id": "vcZVfzz"
     }
   ],
   "companies": [
@@ -174,6 +211,24 @@
       "phone": "0767148455",
       "linkedin": "uir",
       "id": "4TeEetO"
+    },
+    {
+      "name": "company1",
+      "description": "company",
+      "location": "casa",
+      "email": "Ahaddoudi74@gmail.com",
+      "phone": "0767148455",
+      "linkedin": "casavdbd",
+      "id": "z3MhP_k"
+    },
+    {
+      "name": "ABDELKARIM HADDOUDI",
+      "description": "casa",
+      "location": "casa",
+      "email": "Ahaddoudi74@gmail.com",
+      "phone": "0767148455",
+      "linkedin": "haddd",
+      "id": "0YCApJ9"
     }
   ],
   "applications": [
@@ -253,8 +308,7 @@
       "twitter": "https://twitter.com/johndoe",
       "website": "https://johndoe.com",
       "country": "United States",
-      "city": "New York"
-      ,
+      "city": "New York",
       "summary": "A passionate software engineer with over 5 years of experience in developing scalable web applications. Skilled in JavaScript, React, Node.js, and MongoDB.",
       "competence": [
         {
@@ -596,6 +650,67 @@
       "country": "Maroc",
       "city": "TINGHIR",
       "id": "Po0NiWx"
+    },
+    {
+      "nom": "HADDOUDI",
+      "prenom": "ABDELKARIM",
+      "github": "ABDELKARIM",
+      "linkedin": "ABDELKARIM",
+      "summary": "i m dev",
+      "phone": "0767148455",
+      "skills": [
+        {
+          "name": "java"
+        }
+      ],
+      "certifications": [],
+      "experience": [],
+      "hobbies": [],
+      "education": [],
+      "projects": [],
+      "publications": [],
+      "languages": [],
+      "country": "Maroc",
+      "city": "TINGHIR",
+      "id": "53DRSSs"
+    },
+    {
+      "nom": "HADDOUDI",
+      "prenom": "ABDELKARIM",
+      "github": "ABDELKARIM",
+      "linkedin": "ABDELKARIM",
+      "summary": "ABDELKARIM",
+      "phone": "0767148455",
+      "skills": [],
+      "certifications": [],
+      "experience": [],
+      "hobbies": [],
+      "education": [],
+      "projects": [],
+      "publications": [],
+      "languages": [],
+      "country": "Maroc",
+      "city": "TINGHIR",
+      "id": "p-Aqwyw"
+    },
+    {
+      "nom": "HADDOUDI",
+      "prenom": "ABDELKARIM",
+      "github": "haddoudi",
+      "linkedin": "haddoudi",
+      "summary": "haddoudi",
+      "phone": "0767148455",
+      "skills": [],
+      "certifications": [],
+      "experience": [],
+      "hobbies": [],
+      "education": [],
+      "projects": [],
+      "publications": [],
+      "languages": [],
+      "country": "Maroc",
+      "city": "TINGHIR",
+      "id": "rIbdKbx"
     }
   ]
 }

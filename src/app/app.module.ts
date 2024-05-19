@@ -16,6 +16,8 @@ import { HeaderComponent } from './header/header.component';
 import { CompleteProfileComponent } from './complete-profile/complete-profile.component';
 import { CompleteCompanyComponent } from './complete-company/complete-company.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
+import { RegistreCondidatComponent } from './registre-condidat/registre-condidat.component';
+import { RegistreCompanyComponent } from './registre-company/registre-company.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { CompanyProfileComponent } from './company-profile/company-profile.compo
     CompleteProfileComponent,
     CompleteCompanyComponent,
     CompanyProfileComponent,
+    RegistreCondidatComponent,
+    RegistreCompanyComponent,
 
   ],
   imports: [
