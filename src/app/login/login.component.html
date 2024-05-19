@@ -1,38 +1,36 @@
-<div
-  class="flex justify-center items-center min-h-screen bg-gradient-to-r from-blue-900 to-blue-700"
->
-  <div class="bg-blue-700 text-white rounded-lg shadow-lg p-16 flex space-x-16">
-    <div class="w-1/2">
-      <div class="flex flex-col items-center">
-        <img
-          src="path-to-freelancer-icon.svg"
-          alt="Freelancer Icon"
-          class="mb-4"
-        />
-        <h2 class="text-2xl font-bold mb-2">Je suis un collaborateur</h2>
-        <p class="text-blue-300 mb-4">
-          Je recherche une mission et je veux publier mon profile
-        </p>
-        <ul class="text-left space-y-2 mb-6">
-          <li class="flex items-center">
-            <span class="material-icons text-blue-400 mr-2">check_circle</span>
-            Inscription gratuite
-          </li>
-          <li class="flex items-center">
-            <span class="material-icons text-blue-400 mr-2">check_circle</span>
-            Postulez facilement aux offres de mission en ligne
-          </li>
-          <li class="flex items-center">
-            <span class="material-icons text-blue-400 mr-2">check_circle</span>
-            Partagez votre profil sur les réseaux sociaux
-          </li>
-        </ul>
-        <button
-          class="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600"
-        >
-          Inscription Freelance
-        </button>
+<!-- Enhanced login.component.html -->
+<div class="flex items-center justify-center h-screen bg-gradient-to-r from-teal-600 to-gray-800">
+  <div class="w-full max-w-md">
+    <form class="shadow-2xl rounded-lg px-10 pt-8 pb-10 mb-4">
+      <div class="mb-6 text-center">
+        <label class="block text-white text-3xl font-bold mb-7">
+          <img src="assets/shake-icon.webp" class="mx-auto w-1/2 h-1/2">
+          Heureux de vous revoir
+        </label>
+        <label class="block text-white text-lg font-bold mb-2" for="username">
+          Email
+        </label>
+        <input type="email" name="Email" id="username" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email">
       </div>
-    </div>
+      <div class="mb-8">
+        <label class="block text-white text-lg font-bold mb-2" for="password">
+          Mot de passe
+        </label>
+        <input id="password" type="password"  class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="******************">
+        <!-- Lien pour réinitialiser le mot de passe -->
+        <div class="text-center mt-2">
+          <a href="/lien-de-reinitialisation-du-mot-de-passe" class="text-blue-600 hover:text-blue-800 visited:text-purple-600">
+            Mot de passe oublié ?
+          </a>
+        </div>
+      </div>
+      <!-- Bouton de connexion LinkedIn -->
+      <div class="flex items-center justify-center">
+        <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&state=YOUR_UNIQUE_STATE&scope=r_liteprofile%20r_emailaddress" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transform transition duration-300 ease-in-out hover:scale-105 inline-flex items-center">
+          <img src="assets/linkedin.png" alt="LinkedIn" class="w-9 h-9 mr-5"> <!-- Icône LinkedIn -->
+          Se connecter avec LinkedIn
+        </a>
+      </div>
+    </form>
   </div>
 </div>
