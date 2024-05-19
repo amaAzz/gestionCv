@@ -124,6 +124,21 @@
       "role": "candidate",
       "candidateId": "rIbdKbx",
       "id": "vcZVfzz"
+    },
+    {
+      "username": "test@gmail.com",
+      "password": "test@gmail.com",
+      "email": "Ahaddoudi74@gmail.com",
+      "companyId": "wwVzcOO",
+      "role": "company",
+      "id": "Lxgscov"
+    },
+    {
+      "username": "test@gmail.com",
+      "password": "test@gmail.com",
+      "role": "candidate",
+      "candidateId": "k5pUDli",
+      "id": "L_YGQeU"
     }
   ],
   "companies": [
@@ -229,6 +244,9 @@
       "phone": "0767148455",
       "linkedin": "haddd",
       "id": "0YCApJ9"
+    },
+    {
+      "id": "wwVzcOO"
     }
   ],
   "applications": [
@@ -711,6 +729,9 @@
       "country": "Maroc",
       "city": "TINGHIR",
       "id": "rIbdKbx"
+    },
+    {
+      "id": "k5pUDli"
     }
   ]
 }

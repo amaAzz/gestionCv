@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -13,11 +14,11 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private apiService: ApiService,
-    private router: Router
+    private authService:AuthService,
+    private router: Router,
   ) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      username: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
@@ -25,19 +26,19 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    if (this.loginForm.valid) {
-      const { email, password } = this.loginForm.value;
-      this.apiService.getUsers().subscribe(users => {
-        const user = users.find((u: any) => u.email === email && u.password === password);
-        if (user) {
-          // Stocker les informations de l'utilisateur dans localStorage ou une autre méthode de gestion de session
-          localStorage.setItem('currentUser', JSON.stringify(user));
-          // Rediriger l'utilisateur vers la page d'accueil ou une autre page
-          this.router.navigate(['/']);
-        } else {
-          alert('Email ou mot de passe incorrect.');
-        }
-      });
+    console.log(this.loginForm.valid)
+    if (this.authService.login(this.loginForm.value.username, this.loginForm.value.password)) {
+      if(localStorage.getItem("isAuthenticatedCompany")==="true"){
+        this.router.navigate(['/company/1']);
+      }else{
+        this.router.navigate(['/profile/1']);
+
+      }
+
+    } else {
+      alert('Username ou mot de passe incorrect.');
     }
+
+
   }
 }

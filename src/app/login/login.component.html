@@ -1,35 +1,31 @@
-<!-- Enhanced login.component.html -->
 <div class="flex items-center justify-center h-screen bg-gradient-to-r from-teal-600 to-gray-800">
   <div class="w-full max-w-md">
-    <form class="shadow-2xl rounded-lg px-10 pt-8 pb-10 mb-4">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="shadow-2xl rounded-lg px-10 pt-8 pb-10 mb-4">
       <div class="mb-6 text-center">
         <label class="block text-white text-3xl font-bold mb-7">
           <img src="assets/shake-icon.webp" class="mx-auto w-1/2 h-1/2">
           Heureux de vous revoir
         </label>
         <label class="block text-white text-lg font-bold mb-2" for="username">
-          Email
+          username
         </label>
-        <input type="email" name="Email" id="username" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email">
+        <input type="text" name="username" id="username" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Username" formControlName="username">
       </div>
       <div class="mb-8">
         <label class="block text-white text-lg font-bold mb-2" for="password">
           Mot de passe
         </label>
-        <input id="password" type="password"  class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="******************">
-        <!-- Lien pour réinitialiser le mot de passe -->
+        <input id="password" type="password"  class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="******************" formControlName="password">
         <div class="text-center mt-2">
           <a href="/lien-de-reinitialisation-du-mot-de-passe" class="text-blue-600 hover:text-blue-800 visited:text-purple-600">
             Mot de passe oublié ?
           </a>
         </div>
       </div>
-      <!-- Bouton de connexion LinkedIn -->
       <div class="flex items-center justify-center">
-        <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&state=YOUR_UNIQUE_STATE&scope=r_liteprofile%20r_emailaddress" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transform transition duration-300 ease-in-out hover:scale-105 inline-flex items-center">
-          <img src="assets/linkedin.png" alt="LinkedIn" class="w-9 h-9 mr-5"> <!-- Icône LinkedIn -->
-          Se connecter avec LinkedIn
-        </a>
+        <button type="submit" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-6 rounded-lg shadow-lg focus:outline-none focus:shadow-outline transform transition duration-300 ease-in-out hover:scale-105 inline-flex items-center">
+          Se connecter
+        </button>
       </div>
     </form>
   </div>

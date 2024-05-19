@@ -11,13 +11,14 @@ import { JobDetailComponent } from './job-detail/job-detail.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CompanyComponent } from './company/company.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HeaderComponent } from './header/header.component';
 import { CompleteProfileComponent } from './complete-profile/complete-profile.component';
 import { CompleteCompanyComponent } from './complete-company/complete-company.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
 import { RegistreCondidatComponent } from './registre-condidat/registre-condidat.component';
 import { RegistreCompanyComponent } from './registre-company/registre-company.component';
+import { AddJobComponent } from './add-job/add-job.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RegistreCompanyComponent } from './registre-company/registre-company.co
     CompanyProfileComponent,
     RegistreCondidatComponent,
     RegistreCompanyComponent,
+    AddJobComponent,
 
   ],
   imports: [
@@ -42,6 +44,7 @@ import { RegistreCompanyComponent } from './registre-company/registre-company.co
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
 
   ],
   providers: [],

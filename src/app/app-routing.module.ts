@@ -12,9 +12,11 @@ import {CompleteCompanyComponent} from "./complete-company/complete-company.comp
 import {CompanyProfileComponent} from "./company-profile/company-profile.component";
 import {RegistreCondidatComponent} from "./registre-condidat/registre-condidat.component";
 import {RegistreCompanyComponent} from "./registre-company/registre-company.component";
+import {candidateAuthGuard} from "./guard/candidate-auth.guard";
+import {companyAuthGuard} from "./guard/company-auth.guard";
 
 const routes: Routes = [
-  {path:'home',component:HomeComponent},
+  { path:'home',component:HomeComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'register/candidate',component:RegistreCondidatComponent},
