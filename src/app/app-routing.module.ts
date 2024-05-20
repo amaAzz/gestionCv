@@ -14,6 +14,8 @@ import {RegistreCondidatComponent} from "./registre-condidat/registre-condidat.c
 import {RegistreCompanyComponent} from "./registre-company/registre-company.component";
 import {candidateAuthGuard} from "./guard/candidate-auth.guard";
 import {companyAuthGuard} from "./guard/company-auth.guard";
+import {CompanyNavbarComponent} from "./company-navbar/company-navbar.component";
+import {AddJobComponent} from "./add-job/add-job.component";
 
 const routes: Routes = [
   { path:'home',component:HomeComponent},
@@ -28,7 +30,8 @@ const routes: Routes = [
   { path: 'company/:id', component: CompanyProfileComponent},
   { path: 'complete-profile/:id', component: CompleteProfileComponent},
   { path: 'complete-company/:id', component: CompleteCompanyComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: 'company/add/Jobs',component:AddJobComponent}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

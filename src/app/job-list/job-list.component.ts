@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ApiService} from "../services/api.service";
-import {Job} from "../model/models";
+import {Job,Application} from "../model/models";
 
 @Component({
   selector: 'app-job-list',
@@ -9,11 +9,13 @@ import {Job} from "../model/models";
 })
 export class JobListComponent {
   jobs:Job[]=[]
+  application!:{ jobId: number; candidatId: string | undefined; status: string }
   searchTerm: string = '';
   selectedLocation: string = '';
   selectedSkill: string = '';
+  candidateId:string | undefined=''
   constructor(private apiService:ApiService) {
-
+    this.candidateId=localStorage.getItem("idCandidate")?.toString()
   }
   ngOnInit(){
     this.apiService.getJobs().subscribe(value=>{
@@ -38,4 +40,14 @@ export class JobListComponent {
       (this.selectedSkill ? job.skills.includes(this.selectedSkill) : true)
     );
   }
+
+  postuler(id: number) {
+    console.log(this.candidateId)
+    this.application={jobId:id,candidatId:this.candidateId,status: "Applied"}
+    this.apiService.addApplication(this.application).subscribe(()=>{
+      console.log("hello word")
+    })
+  }
 }
+
+

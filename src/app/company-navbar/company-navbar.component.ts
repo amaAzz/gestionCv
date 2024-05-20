@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-company-navbar',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './company-navbar.component.css'
 })
 export class CompanyNavbarComponent {
+  constructor(private router:Router) {
+  }
 
+  goToAddJobs() {
+    this.router.navigate(['/company/add/Jobs'])
+  }
 }

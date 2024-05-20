@@ -34,6 +34,7 @@
           <h4 class="text-lg font-semibold">Localisation:</h4>
           <p>{{ job.location }}</p>
         </div>
+        <button (click)="postuler(job.id)"> postuler</button>
       </li>
     </ul>
     <p *ngIf="filteredJobs.length === 0" class="text-center text-gray-500">Aucune offre d'emploi trouvée.</p>

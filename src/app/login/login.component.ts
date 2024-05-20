@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/company/1']);
       }else{
         this.router.navigate(['/profile/1']);
-
       }
 
     } else {
