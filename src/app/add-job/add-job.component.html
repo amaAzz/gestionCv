@@ -1,1 +1,44 @@
-<p>add-job works!</p>
+<div class="flex h-screen bg-gray-100">
+  <app-company-navbar></app-company-navbar>
+  <!-- Content -->
+  <div class="flex-1  bg-gradient-to-r from-teal-100 to-gray-300">
+    <div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-teal-600 to-gray-800">
+      <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-bold text-center text-teal-600 mb-8">Complete Your Profile</h2>
+        <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-gray-700 font-semibold mb-2">title</label>
+              <input formControlName="title" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="block text-gray-700 font-semibold mb-2">description</label>
+              <input formControlName="description" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="block text-gray-700 font-semibold mb-2">location</label>
+              <input formControlName="location" type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" />
+            </div>
+            <div class="mt-8">
+              <h3 class="text-xl font-bold text-teal-600 mb-4">Skills</h3>
+              <div formArrayName="skills" id="c" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div *ngFor="let skills of skills.controls; let i = index" [formGroupName]="i" class="flex items-center">
+                  <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent" formControlName="name" id="nameCom" placeholder="Enter skill name" />
+                  <button type="button" (click)="removeSkills(i)" class="ml-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50">Remove</button>
+                </div>
+              </div>
+              <button type="button" (click)="addskills()" class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Add Skill</button>
+            </div>
+
+            <div *ngIf="error" class="text-red-500 mb-4">{{ error }}</div>
+            <div class="flex justify-end">
+              <button type="submit" class="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50">Complete Profile</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
