@@ -126,19 +126,56 @@
       "id": "vcZVfzz"
     },
     {
-      "username": "test@gmail.com",
-      "password": "test@gmail.com",
-      "email": "Ahaddoudi74@gmail.com",
-      "companyId": "wwVzcOO",
-      "role": "company",
-      "id": "Lxgscov"
+      "username": "Hamza azzab",
+      "password": "hamza",
+      "role": "candidate",
+      "candidateId": "pGlIWAY",
+      "id": "j9DFPEV"
     },
     {
-      "username": "test@gmail.com",
-      "password": "test@gmail.com",
+      "username": "hamza maliki",
+      "password": "nuttertools",
       "role": "candidate",
-      "candidateId": "k5pUDli",
-      "id": "L_YGQeU"
+      "candidateId": "_0gEzcg",
+      "id": "LqYGL3v"
+    },
+    {
+      "username": "Hamza azzab",
+      "password": "yess",
+      "role": "candidate",
+      "candidateId": "MBSM8tK",
+      "id": "DfFqrxN"
+    },
+    {
+      "username": "hp",
+      "password": "hp",
+      "email": "hp@gmail.com",
+      "companyId": "xEqqzrs",
+      "role": "company",
+      "id": "cpSfKmi"
+    },
+    {
+      "username": "Hamza azzab",
+      "password": "hhhhhh",
+      "role": "candidate",
+      "candidateId": "7A1zRlc",
+      "id": "oIip7MM"
+    },
+    {
+      "username": "hp",
+      "password": "hp",
+      "email": "hp@gmail.com",
+      "companyId": "-nv1T6W",
+      "role": "company",
+      "id": "isL7blF"
+    },
+    {
+      "username": "DELL",
+      "password": "DELL",
+      "email": "dell@gmail.com",
+      "companyId": "ozFyPMD",
+      "role": "company",
+      "id": "fAsG0eZ"
     }
   ],
   "companies": [
@@ -170,17 +207,6 @@
             "Express"
           ],
           "location": "Remote"
-        },
-        {
-          "title": "test",
-          "description": "test",
-          "location": "test",
-          "skills": [
-            {
-              "name": "JAVA"
-            }
-          ],
-          "id": "_9DJgQy"
         }
       ],
       "email": "contact@techinnovators.com",
@@ -257,7 +283,31 @@
       "id": "0YCApJ9"
     },
     {
-      "id": "wwVzcOO"
+      "name": "HP",
+      "description": "Entreprise kat nsseb ela nasse",
+      "location": "google chrome",
+      "email": "hamza.azzab@emsi-edu.ma",
+      "phone": "0657147321",
+      "linkedin": "google",
+      "id": "xEqqzrs"
+    },
+    {
+      "name": "HP",
+      "description": "Entreprise kat nsseb ela nasse",
+      "location": "google chrome",
+      "email": "hamza.azzab@emsi-edu.ma",
+      "phone": "0657147321",
+      "linkedin": "google",
+      "id": "-nv1T6W"
+    },
+    {
+      "name": "DELL",
+      "description": "info",
+      "location": "new york",
+      "email": "hamza.azzab@emsi-edu.ma",
+      "phone": "0657147321",
+      "linkedin": "google",
+      "id": "ozFyPMD"
     }
   ],
   "applications": [
@@ -274,25 +324,24 @@
       "status": "Applied"
     },
     {
+      "jobId": "2",
+      "status": "Applied",
+      "id": "ndVIE3T"
+    },
+    {
+      "jobId": "2",
+      "status": "Applied",
+      "id": "iqm0R1m"
+    },
+    {
+      "jobId": "2",
+      "status": "Applied",
+      "id": "1SQ-cLR"
+    },
+    {
       "jobId": "1",
       "status": "Applied",
-      "id": "0MVvqWx"
-    },
-    {
-      "jobId": "_9DJgQy",
-      "status": "Applied",
-      "id": "3n2C_qx"
-    },
-    {
-      "jobId": "QVk1QJr",
-      "status": "Applied",
-      "id": "tqv4kH7"
-    },
-    {
-      "jobId": "_9DJgQy",
-      "candidatId": "1",
-      "status": "Applied",
-      "id": "Tm150xm"
+      "id": "l4KZq0l"
     }
   ],
   "jobs": [
@@ -306,7 +355,8 @@
         "HTML",
         "CSS"
       ],
-      "location": "San Francisco, CA"
+      "location": "San Francisco, CA",
+      "companyId": 1
     },
     {
       "id": "2",
@@ -317,7 +367,8 @@
         "MongoDB",
         "Express"
       ],
-      "location": "Remote"
+      "location": "Remote",
+      "companyId": 1
     },
     {
       "id": "3",
@@ -340,107 +391,8 @@
         "Healthcare",
         "Agile"
       ],
-      "location": "Remote"
-    },
-    {
-      "title": "jab1",
-      "description": "job",
-      "location": "remote",
-      "skills": [
-        {
-          "name": "java"
-        },
-        {
-          "name": "c++"
-        }
-      ],
-      "id": "OObUHWE"
-    },
-    {
-      "title": "full stack java",
-      "description": "devlopper full stack",
-      "location": "remote",
-      "skills": [
-        {
-          "name": "java"
-        },
-        {
-          "name": "html"
-        }
-      ],
-      "id": "p3C1_M_"
-    },
-    {
-      "title": "job full stack",
-      "description": "dfeghjkcld",
-      "location": "remote",
-      "skills": [
-        {
-          "name": "java"
-        }
-      ],
-      "id": "6098qjH"
-    },
-    {
-      "title": "java",
-      "description": "description",
-      "location": "remote",
-      "skills": [
-        {
-          "name": "java"
-        },
-        {
-          "name": "c++"
-        }
-      ],
-      "id": "eAFuVlK"
-    },
-    {
-      "title": "java",
-      "description": "description",
-      "location": "remote",
-      "skills": [
-        {
-          "name": "java"
-        },
-        {
-          "name": "c++"
-        }
-      ],
-      "id": "td8Z9oT"
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "location": "remote",
-      "skills": [
-        {
-          "name": "JAVA"
-        }
-      ],
-      "id": "8VxvzO4"
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "location": "remote",
-      "skills": [
-        {
-          "name": "JAVA"
-        }
-      ],
-      "id": "QVk1QJr"
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "location": "test",
-      "skills": [
-        {
-          "name": "JAVA"
-        }
-      ],
-      "id": "_9DJgQy"
+      "location": "Remote",
+      "companyId": 2
     }
   ],
   "candidates": [
@@ -547,10 +499,10 @@
     },
     {
       "id": "2",
-      "name": "haddoudi",
-      "prenom": "abdelkarim",
-      "email": "john.doe@example.com",
-      "phone": "+1234567890",
+      "name": "AZZAB",
+      "prenom": "HAMZA",
+      "email": "hamzaa.azzab@example.com",
+      "phone": "+21265844784",
       "github": "https://github.com/johndoe",
       "linkedin": "https://linkedin.com/in/johndoe",
       "twitter": "https://twitter.com/johndoe",
@@ -860,7 +812,16 @@
       "id": "rIbdKbx"
     },
     {
-      "id": "k5pUDli"
+      "id": "pGlIWAY"
+    },
+    {
+      "id": "_0gEzcg"
+    },
+    {
+      "id": "MBSM8tK"
+    },
+    {
+      "id": "7A1zRlc"
     }
   ]
 }
