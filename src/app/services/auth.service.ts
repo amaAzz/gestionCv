@@ -38,7 +38,7 @@ export class AuthService {
             this._isAuthenticatedCandidate = true;
             return true
           } else {
-            console.log("hello2")
+            console.log("hello2222222222222")
             localStorage.setItem("idCompany",<string>user.companyId?.toString())
             localStorage.setItem("isAuthenticatedCompany","true")
             localStorage.setItem("isAuthenticatedCandidate","false")
@@ -67,12 +67,13 @@ export class AuthService {
   }
 
 
-  get isAuthenticatedCandidate(): boolean {
-    return this._isAuthenticatedCandidate;
+  get isAuthenticatedCandidate(): string | null {
+    return localStorage.getItem("isAuthenticatedCandidate") ;
   }
 
-  get isAuthenticatedCompany(): boolean {
-    return this._isAuthenticatedCompany;
+  get isAuthenticatedCompany(): string | null {
+    console.log("hello1")
+    return localStorage.getItem("isAuthenticatedCompany");
   }
 
 

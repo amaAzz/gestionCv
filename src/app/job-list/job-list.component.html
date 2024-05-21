@@ -26,7 +26,7 @@
           <h4 class="text-lg font-semibold">Compétences requises:</h4>
           <div class="flex flex-wrap">
             <span *ngFor="let skill of job.skills" class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
-              {{ skill }}
+              {{ skill.name }}
             </span>
           </div>
         </div>
@@ -34,7 +34,7 @@
           <h4 class="text-lg font-semibold">Localisation:</h4>
           <p>{{ job.location }}</p>
         </div>
-        <button (click)="postuler(job.id)"> postuler</button>
+        <button *ngIf=authCandidat (click)="postuler(job.id)"> postuler</button>
       </li>
     </ul>
     <p *ngIf="filteredJobs.length === 0" class="text-center text-gray-500">Aucune offre d'emploi trouvée.</p>

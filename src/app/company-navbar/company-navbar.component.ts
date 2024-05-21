@@ -13,4 +13,9 @@ export class CompanyNavbarComponent {
   goToAddJobs() {
     this.router.navigate(['/company/add/Jobs'])
   }
+
+  goToAddCompany() {
+    this.router.navigate(['/company/'+localStorage.getItem("idCompany")?.toString()])
+
+  }
 }
