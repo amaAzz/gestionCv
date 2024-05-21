@@ -21,6 +21,7 @@ import { RegistreCompanyComponent } from './registre-company/registre-company.co
 import { AddJobComponent } from './add-job/add-job.component';
 import {CompanyNavbarComponent} from "./company-navbar/company-navbar.component";
 import { PostulationJobComponent } from './postulation-job/postulation-job.component';
+import { ListPostulationComponent } from './list-postulation/list-postulation.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PostulationJobComponent } from './postulation-job/postulation-job.compo
     RegistreCompanyComponent,
     AddJobComponent,
     CompanyNavbarComponent,
-    PostulationJobComponent
+    PostulationJobComponent,
+    ListPostulationComponent
 
   ],
   imports: [

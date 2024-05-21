@@ -1,0 +1,32 @@
+<div class="flex h-screen bg-gray-100">
+  <app-company-navbar></app-company-navbar>
+  <!-- Content -->
+  <div class="flex-1  bg-gradient-to-r from-teal-100 to-gray-300">
+<div class="container mx-auto p-4">
+  <div *ngFor="let item of objetctAffiche" class="bg-white shadow-md rounded-lg mb-4 p-4">
+    <h2 class="text-xl font-semibold mb-2">{{ item.job.title }}</h2>
+    <p class="text-gray-600 mb-4">{{ item.job.description }}</p>
+
+    <div *ngIf="item.candidates.length > 0">
+      <h3 class="text-lg font-medium mb-2">Candidates:</h3>
+      <ul>
+        <li *ngFor="let candidate of item.candidates" class="flex items-center justify-between mb-2">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 h-10 w-10">
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">{{ candidate.prenom }} {{ candidate.nom}}</p>
+              <p class="text-sm text-gray-500">{{ candidate.email }}</p>
+            </div>
+          </div>
+          <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" (click)="goToCandidateProfile(candidate.id)">View Profile</button>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="item.candidates.length === 0">
+      <p class="text-gray-500">No candidates have applied for this job yet.</p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

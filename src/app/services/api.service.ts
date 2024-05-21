@@ -81,4 +81,9 @@ export class ApiService {
 
 
   }
+
+  deleteJob(jobId: number) {
+    return this.http.delete<void>(`${this.baseUrl}/jobs/${jobId}`);
+
+  }
 }

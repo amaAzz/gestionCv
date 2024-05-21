@@ -1,5 +1,5 @@
 <div class="flex h-screen bg-gray-100">
-<app-company-navbar></app-company-navbar>
+  <app-company-navbar></app-company-navbar>
 
   <!-- Content -->
   <div class="flex-1 p-8 bg-gradient-to-r from-teal-100 to-gray-300">
@@ -10,7 +10,7 @@
         <p class="text-xl text-gray-600">{{ company.location }}</p>
       </div>
       <div class="mt-8">
-        <h2 class="text-2xl  font-semibold text-gray-800">Contact Information</h2>
+        <h2 class="text-2xl font-semibold text-gray-800">Contact Information</h2>
         <ul class="mt-4 text-gray-700">
           <li>Email: <a href="mailto:{{ company.email }}" class="text-blue-600">{{ company.email }}</a></li>
           <li>Phone: {{ company.phone }}</li>
@@ -22,8 +22,12 @@
           <li *ngFor="let job of company.jobs" class="mb-4">
             <strong class="text-xl">{{ job.title }}</strong>
             <p>{{ job.description }}</p>
-            <p class="text-gray-600">Skills: {{ job.skills.join(', ') }}</p>
+            <p class="text-gray-600">Skills:</p>
+            <ul>
+              <li *ngFor="let skill of job.skills">{{skill.name}}</li>
+            </ul>
             <p class="text-gray-600">Location: {{ job.location }}</p>
+            <button (click)="deleteJob(job.id)" class="text-red-600">Delete Job</button> <!-- Bouton de suppression -->
           </li>
         </ul>
       </div>

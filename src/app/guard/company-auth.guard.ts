@@ -6,7 +6,8 @@ export const companyAuthGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
   const router=inject(Router)
 
-  if(authService.isAuthenticatedCompany){
+  if(authService.isAuthenticatedCompany=="true"){
+    console.log("hello")
     return true
   }else{
     router.navigate(['/login']);

@@ -38,14 +38,6 @@
     {
       "username": "haddoudi",
       "password": "test@gmail.com",
-      "role": "company",
-      "email": "test@gmail.com",
-      "companyId": "YSm2Wbw",
-      "id": "o9AVRm0"
-    },
-    {
-      "username": "haddoudi",
-      "password": "test@gmail.com",
       "role": "candidate",
       "candidateId": "sh8PR5-",
       "id": "0FUp7Y4"
@@ -56,14 +48,6 @@
       "role": "candidate",
       "candidateId": "5RpPHUK",
       "id": "lf8vejM"
-    },
-    {
-      "username": "haddoudi",
-      "password": "test@gmail.com",
-      "role": "company",
-      "email": "test@gmail.com",
-      "companyId": "vA9wNRc",
-      "id": "bEka36p"
     },
     {
       "username": "uir",
@@ -126,56 +110,27 @@
       "id": "vcZVfzz"
     },
     {
-      "username": "Hamza azzab",
-      "password": "hamza",
-      "role": "candidate",
-      "candidateId": "pGlIWAY",
-      "id": "j9DFPEV"
-    },
-    {
-      "username": "hamza maliki",
-      "password": "nuttertools",
-      "role": "candidate",
-      "candidateId": "_0gEzcg",
-      "id": "LqYGL3v"
-    },
-    {
-      "username": "Hamza azzab",
-      "password": "yess",
-      "role": "candidate",
-      "candidateId": "MBSM8tK",
-      "id": "DfFqrxN"
-    },
-    {
-      "username": "hp",
-      "password": "hp",
-      "email": "hp@gmail.com",
-      "companyId": "xEqqzrs",
+      "username": "test@gmail.com",
+      "password": "test@gmail.com",
+      "email": "Ahaddoudi74@gmail.com",
+      "companyId": "wwVzcOO",
       "role": "company",
-      "id": "cpSfKmi"
+      "id": "Lxgscov"
     },
     {
-      "username": "Hamza azzab",
-      "password": "hhhhhh",
+      "username": "test@gmail.com",
+      "password": "test@gmail.com",
       "role": "candidate",
-      "candidateId": "7A1zRlc",
-      "id": "oIip7MM"
+      "candidateId": "k5pUDli",
+      "id": "L_YGQeU"
     },
     {
-      "username": "hp",
-      "password": "hp",
-      "email": "hp@gmail.com",
-      "companyId": "-nv1T6W",
+      "username": "company2",
+      "password": "password1",
+      "email": "Ahaddoudi74@gmail.com",
+      "companyId": "O445BTm",
       "role": "company",
-      "id": "isL7blF"
-    },
-    {
-      "username": "DELL",
-      "password": "DELL",
-      "email": "dell@gmail.com",
-      "companyId": "ozFyPMD",
-      "role": "company",
-      "id": "fAsG0eZ"
+      "id": "fMbHfL2"
     }
   ],
   "companies": [
@@ -207,6 +162,28 @@
             "Express"
           ],
           "location": "Remote"
+        },
+        {
+          "title": "test",
+          "description": "test",
+          "location": "test",
+          "skills": [
+            {
+              "name": "JAVA"
+            }
+          ],
+          "id": "_9DJgQy"
+        },
+        {
+          "title": "java full stack",
+          "description": "description",
+          "location": "remote",
+          "skills": [
+            {
+              "name": "JAVA"
+            }
+          ],
+          "id": "8BOlE5c"
         }
       ],
       "email": "contact@techinnovators.com",
@@ -283,40 +260,20 @@
       "id": "0YCApJ9"
     },
     {
-      "name": "HP",
-      "description": "Entreprise kat nsseb ela nasse",
-      "location": "google chrome",
-      "email": "hamza.azzab@emsi-edu.ma",
-      "phone": "0657147321",
-      "linkedin": "google",
-      "id": "xEqqzrs"
+      "id": "wwVzcOO"
     },
     {
-      "name": "HP",
-      "description": "Entreprise kat nsseb ela nasse",
-      "location": "google chrome",
-      "email": "hamza.azzab@emsi-edu.ma",
-      "phone": "0657147321",
+      "name": "ABDELKARIM HADDOUDI",
+      "description": "ABDELKARIM HADDOUDI",
+      "location": "casa",
+      "email": "Ahaddoudi74@gmail.com",
+      "phone": "0767148455",
       "linkedin": "google",
-      "id": "-nv1T6W"
-    },
-    {
-      "name": "DELL",
-      "description": "info",
-      "location": "new york",
-      "email": "hamza.azzab@emsi-edu.ma",
-      "phone": "0657147321",
-      "linkedin": "google",
-      "id": "ozFyPMD"
+      "id": "O445BTm",
+      "jobs": []
     }
   ],
   "applications": [
-    {
-      "id": "1",
-      "jobId": 1,
-      "candidateId": 1,
-      "status": "Applied"
-    },
     {
       "id": "2",
       "jobId": 3,
@@ -324,60 +281,140 @@
       "status": "Applied"
     },
     {
-      "jobId": "2",
+      "jobId": "_9DJgQy",
       "status": "Applied",
-      "id": "ndVIE3T"
+      "id": "3n2C_qx",
+      "candidateId": 1
+    },
+    {
+      "jobId": "QVk1QJr",
+      "status": "Applied",
+      "id": "tqv4kH7",
+      "candidateId": 1
+    },
+    {
+      "jobId": "_9DJgQy",
+      "candidateId": 1,
+      "status": "Applied",
+      "id": "Tm150xm"
+    },
+    {
+      "jobId": "8BOlE5c",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "Sevu4yi"
+    },
+    {
+      "jobId": "8BOlE5c",
+      "candidateId": "7i6ouhn",
+      "status": "Applied",
+      "id": "3-3KPkJ"
     },
     {
       "jobId": "2",
+      "candidateId": "1",
       "status": "Applied",
-      "id": "iqm0R1m"
+      "id": "4H-ipgJ"
     },
     {
-      "jobId": "2",
+      "jobId": "3",
+      "candidateId": "1",
       "status": "Applied",
-      "id": "1SQ-cLR"
+      "id": "KZKJMsz"
     },
     {
-      "jobId": "1",
+      "jobId": "4",
+      "candidateId": "1",
       "status": "Applied",
-      "id": "l4KZq0l"
+      "id": "mJKaIUi"
+    },
+    {
+      "jobId": "OObUHWE",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "3TDoshu"
+    },
+    {
+      "jobId": "p3C1_M_",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "rKZ9j7A"
+    },
+    {
+      "jobId": "6098qjH",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "vH_COb5"
+    },
+    {
+      "jobId": "eAFuVlK",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "F_7kvxW"
+    },
+    {
+      "jobId": "td8Z9oT",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "cHhTLPC"
+    },
+    {
+      "jobId": "8VxvzO4",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "Bp9nDdS"
+    },
+    {
+      "jobId": "QVk1QJr",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "8ajJwPM"
+    },
+    {
+      "jobId": "_9DJgQy",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "SSKPVr0"
+    },
+    {
+      "jobId": "8BOlE5c",
+      "candidateId": "1",
+      "status": "Applied",
+      "id": "6UjmfvV"
     }
   ],
   "jobs": [
-    {
-      "id": "1",
-      "title": "Frontend Developer",
-      "description": "Looking for an experienced frontend developer with knowledge in Angular.",
-      "skills": [
-        "JavaScript",
-        "Angular",
-        "HTML",
-        "CSS"
-      ],
-      "location": "San Francisco, CA",
-      "companyId": 1
-    },
     {
       "id": "2",
       "title": "Backend Developer",
       "description": "Seeking a backend developer proficient in Node.js and MongoDB.",
       "skills": [
-        "Node.js",
-        "MongoDB",
-        "Express"
+        {
+          "name": "Node.js"
+        },
+        {
+          "name": "MongoDB"
+        },
+        {
+          "name": "Express"
+        }
       ],
-      "location": "Remote",
-      "companyId": 1
+      "location": "Remote"
     },
     {
       "id": "3",
       "title": "Data Scientist",
       "description": "Seeking a data scientist with expertise in machine learning and healthcare data.",
       "skills": [
-        "Python",
-        "Machine Learning",
-        "Data Analysis"
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Machine Learning"
+        },
+        {
+          "name": "Data Analysis"
+        }
       ],
       "location": "New York, NY",
       "companyId": 2
@@ -387,12 +424,262 @@
       "title": "Project Manager",
       "description": "Looking for a project manager with experience in healthcare projects.",
       "skills": [
-        "Project Management",
-        "Healthcare",
-        "Agile"
+        {
+          "name": "Project Management"
+        },
+        {
+          "name": "Healthcare"
+        },
+        {
+          "name": "Agile"
+        }
       ],
-      "location": "Remote",
-      "companyId": 2
+      "location": "Remote"
+    },
+    {
+      "title": "jab1",
+      "description": "job",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "c++"
+        }
+      ],
+      "id": "OObUHWE"
+    },
+    {
+      "title": "full stack java",
+      "description": "devlopper full stack",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "html"
+        }
+      ],
+      "id": "p3C1_M_"
+    },
+    {
+      "title": "job full stack",
+      "description": "dfeghjkcld",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        }
+      ],
+      "id": "6098qjH"
+    },
+    {
+      "title": "java",
+      "description": "description",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "c++"
+        }
+      ],
+      "id": "eAFuVlK"
+    },
+    {
+      "title": "java",
+      "description": "description",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "c++"
+        }
+      ],
+      "id": "td8Z9oT"
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "JAVA"
+        }
+      ],
+      "id": "8VxvzO4"
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "JAVA"
+        }
+      ],
+      "id": "QVk1QJr"
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "location": "test",
+      "skills": [
+        {
+          "name": "JAVA"
+        }
+      ],
+      "id": "_9DJgQy"
+    },
+    {
+      "title": "java full stack",
+      "description": "description",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "JAVA"
+        }
+      ],
+      "id": "8BOlE5c"
+    },
+    {
+      "title": "fullstack",
+      "description": "casa",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "c++"
+        }
+      ],
+      "id": "DV6777Z"
+    },
+    {
+      "title": "fullstack",
+      "description": "casa",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "c++"
+        }
+      ],
+      "id": "ymZYs70"
+    },
+    {
+      "title": "fullstack",
+      "description": "casa",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "c++"
+        }
+      ],
+      "id": "42sAsFj"
+    },
+    {
+      "title": "java",
+      "description": "helloo",
+      "location": "hvuyhdckjcs",
+      "skills": [
+        {
+          "name": "JAVA"
+        }
+      ],
+      "id": "13ScfWw"
+    },
+    {
+      "title": "fullstack",
+      "description": "remote",
+      "location": "remote",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "c++"
+        }
+      ],
+      "id": "5uNiDyy"
+    },
+    {
+      "title": "java",
+      "description": "java",
+      "location": "java",
+      "skills": [
+        {
+          "name": "java"
+        },
+        {
+          "name": "c++"
+        }
+      ],
+      "id": "5K-xIpI"
+    },
+    {
+      "title": "haddpid",
+      "description": "vfgbfv",
+      "location": "vdf",
+      "skills": [
+        {
+          "name": "java"
+        }
+      ],
+      "id": "q7wEjn1"
+    },
+    {
+      "title": "hacbjb",
+      "description": "bbh d",
+      "location": "jubjf bhdf",
+      "skills": [],
+      "id": "CiF3ROR"
+    },
+    {
+      "title": "cccd",
+      "description": "vfvv",
+      "location": "vdfvd",
+      "skills": [],
+      "id": "fn46lma"
+    },
+    {
+      "title": "hvjchcc",
+      "description": "bk vk",
+      "location": "vjk  ",
+      "skills": [],
+      "id": "RKG8T5a"
+    },
+    {
+      "title": "haddoudi",
+      "description": "abdelakrim",
+      "location": "remote",
+      "skills": [],
+      "id": "3eKVfUe"
+    },
+    {
+      "title": "haddoud",
+      "description": "abdelkarim",
+      "location": "remote",
+      "skills": [],
+      "id": "yCyBDWR"
+    },
+    {
+      "title": "hlvjhc",
+      "description": "vjc kvsv ",
+      "location": "bjv bkv esbv",
+      "skills": [],
+      "id": "9vUNBnT"
     }
   ],
   "candidates": [
@@ -409,7 +696,7 @@
       "country": "United States",
       "city": "New York",
       "summary": "A passionate software engineer with over 5 years of experience in developing scalable web applications. Skilled in JavaScript, React, Node.js, and MongoDB.",
-      "competence": [
+      "skills": [
         {
           "name": "C++",
           "neveau": "debutant"
@@ -499,10 +786,10 @@
     },
     {
       "id": "2",
-      "name": "AZZAB",
-      "prenom": "HAMZA",
-      "email": "hamzaa.azzab@example.com",
-      "phone": "+21265844784",
+      "name": "haddoudi",
+      "prenom": "abdelkarim",
+      "email": "john.doe@example.com",
+      "phone": "+1234567890",
       "github": "https://github.com/johndoe",
       "linkedin": "https://linkedin.com/in/johndoe",
       "twitter": "https://twitter.com/johndoe",
@@ -510,7 +797,7 @@
       "country": "United States",
       "city": "New York",
       "summary": "A passionate software engineer with over 5 years of experience in developing scalable web applications. Skilled in JavaScript, React, Node.js, and MongoDB.",
-      "compétence": [
+      "skills": [
         {
           "name": "C++",
           "neveau": "debutant"
@@ -611,7 +898,7 @@
       "country": "United States",
       "city": "New York",
       "summary": "A passionate software engineer with over 5 years of experience in developing scalable web applications. Skilled in JavaScript, React, Node.js, and MongoDB.",
-      "competence": [
+      "skills": [
         {
           "name": "C++",
           "neveau": "debutant"
@@ -812,16 +1099,7 @@
       "id": "rIbdKbx"
     },
     {
-      "id": "pGlIWAY"
-    },
-    {
-      "id": "_0gEzcg"
-    },
-    {
-      "id": "MBSM8tK"
-    },
-    {
-      "id": "7A1zRlc"
+      "id": "k5pUDli"
     }
   ]
 }
