@@ -176,6 +176,14 @@
       "companyId": "ozFyPMD",
       "role": "company",
       "id": "fAsG0eZ"
+    },
+    {
+      "username": "DELL",
+      "password": "fdfdf",
+      "email": "dell@gmail.com",
+      "companyId": "vtDQ8i3",
+      "role": "company",
+      "id": "CqmOGsk"
     }
   ],
   "companies": [
@@ -308,6 +316,15 @@
       "phone": "0657147321",
       "linkedin": "google",
       "id": "ozFyPMD"
+    },
+    {
+      "name": "DELL",
+      "description": "info",
+      "location": "new york",
+      "email": "hamza.azzab@emsi-edu.ma",
+      "phone": "0657147321",
+      "linkedin": "google",
+      "id": "vtDQ8i3"
     }
   ],
   "applications": [
