@@ -16,8 +16,6 @@ import {candidateAuthGuard} from "./guard/candidate-auth.guard";
 import {companyAuthGuard} from "./guard/company-auth.guard";
 import {CompanyNavbarComponent} from "./company-navbar/company-navbar.component";
 import {AddJobComponent} from "./add-job/add-job.component";
-import {ListPostulationComponent} from "./list-postulation/list-postulation.component";
-import {PostulationCandidatComponent} from "./postulation-candidat/postulation-candidat.component";
 
 const routes: Routes = [
   { path:'home',component:HomeComponent},
@@ -29,13 +27,11 @@ const routes: Routes = [
   { path: 'jobs', component: JobListComponent },
   { path: 'jobs/:id', component: JobDetailComponent },
   { path: 'company', component: CompanyComponent },
-  { path: 'company/:id', component: CompanyProfileComponent,canActivate:[companyAuthGuard]},
+  { path: 'company/:id', component: CompanyProfileComponent},
   { path: 'complete-profile/:id', component: CompleteProfileComponent},
-  { path: 'listPostulation', component: ListPostulationComponent,canActivate:[companyAuthGuard]},
   { path: 'complete-company/:id', component: CompleteCompanyComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  {path: 'company/add/Jobs',component:AddJobComponent,canActivate:[companyAuthGuard]},
-  {path: 'candidate/postulation',component:PostulationCandidatComponent,canActivate:[candidateAuthGuard]}
+  {path: 'company/add/Jobs',component:AddJobComponent}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
