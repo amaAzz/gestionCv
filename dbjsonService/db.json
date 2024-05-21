@@ -38,14 +38,6 @@
     {
       "username": "haddoudi",
       "password": "test@gmail.com",
-      "role": "company",
-      "email": "test@gmail.com",
-      "companyId": "YSm2Wbw",
-      "id": "o9AVRm0"
-    },
-    {
-      "username": "haddoudi",
-      "password": "test@gmail.com",
       "role": "candidate",
       "candidateId": "sh8PR5-",
       "id": "0FUp7Y4"
@@ -56,14 +48,6 @@
       "role": "candidate",
       "candidateId": "5RpPHUK",
       "id": "lf8vejM"
-    },
-    {
-      "username": "haddoudi",
-      "password": "test@gmail.com",
-      "role": "company",
-      "email": "test@gmail.com",
-      "companyId": "vA9wNRc",
-      "id": "bEka36p"
     },
     {
       "username": "uir",
@@ -202,9 +186,15 @@
           "title": "Backend Developer",
           "description": "Seeking a backend developer proficient in Node.js and MongoDB.",
           "skills": [
-            "Node.js",
-            "MongoDB",
-            "Express"
+
+            {
+              "name": "Project Management"
+            },
+            {
+              "name": "Project Management"
+            }, {
+              "name": "Project Management"
+            }
           ],
           "location": "Remote"
         }
@@ -223,9 +213,15 @@
           "title": "Data Scientist",
           "description": "Seeking a data scientist with expertise in machine learning and healthcare data.",
           "skills": [
-            "Python",
-            "Machine Learning",
-            "Data Analysis"
+
+            {
+              "name": "Project Management"
+            },
+            {
+              "name": "Project Management"
+            }, {
+              "name": "Project Management"
+            }
           ],
           "location": "New York, NY"
         },
@@ -234,9 +230,15 @@
           "title": "Project Manager",
           "description": "Looking for a project manager with experience in healthcare projects.",
           "skills": [
-            "Project Management",
-            "Healthcare",
-            "Agile"
+
+            {
+              "name": "Project Management"
+            },
+            {
+              "name": "Project Management"
+            }, {
+              "name": "Project Management"
+            }
           ],
           "location": "Remote"
         }
