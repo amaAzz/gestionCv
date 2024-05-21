@@ -29,9 +29,9 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.valid)
     if (this.authService.login(this.loginForm.value.username, this.loginForm.value.password)) {
       if(localStorage.getItem("isAuthenticatedCompany")==="true"){
-        this.router.navigate(['/company/1']);
+        this.router.navigate(['/company/'+localStorage.getItem("idCompany")]);
       }else{
-        this.router.navigate(['/profile/1']);
+        this.router.navigate(['/jobs']);
       }
 
     } else {

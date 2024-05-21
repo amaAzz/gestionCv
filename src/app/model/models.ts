@@ -21,7 +21,7 @@ export interface Job {
   id: number
   title: string
   description: string
-  skills: string[]
+  skills: skills[]
   location: string
 }
 
