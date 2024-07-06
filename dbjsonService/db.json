@@ -168,6 +168,13 @@
       "companyId": "vtDQ8i3",
       "role": "company",
       "id": "CqmOGsk"
+    },
+    {
+      "username": "Hamza azzab",
+      "password": "123456789",
+      "role": "candidate",
+      "candidateId": "PcJpK9C",
+      "id": "XQOkVPJ"
     }
   ],
   "companies": [
@@ -188,23 +195,6 @@
             "CSS"
           ],
           "location": "San Francisco, CA"
-        },
-        {
-          "id": 2,
-          "title": "Backend Developer",
-          "description": "Seeking a backend developer proficient in Node.js and MongoDB.",
-          "skills": [
-
-            {
-              "name": "Project Management"
-            },
-            {
-              "name": "Project Management"
-            }, {
-              "name": "Project Management"
-            }
-          ],
-          "location": "Remote"
         }
       ],
       "email": "contact@techinnovators.com",
@@ -221,13 +211,13 @@
           "title": "Data Scientist",
           "description": "Seeking a data scientist with expertise in machine learning and healthcare data.",
           "skills": [
-
             {
               "name": "Project Management"
             },
             {
               "name": "Project Management"
-            }, {
+            },
+            {
               "name": "Project Management"
             }
           ],
@@ -238,13 +228,13 @@
           "title": "Project Manager",
           "description": "Looking for a project manager with experience in healthcare projects.",
           "skills": [
-
             {
               "name": "Project Management"
             },
             {
               "name": "Project Management"
-            }, {
+            },
+            {
               "name": "Project Management"
             }
           ],
@@ -343,21 +333,6 @@
       "status": "Applied"
     },
     {
-      "jobId": "2",
-      "status": "Applied",
-      "id": "ndVIE3T"
-    },
-    {
-      "jobId": "2",
-      "status": "Applied",
-      "id": "iqm0R1m"
-    },
-    {
-      "jobId": "2",
-      "status": "Applied",
-      "id": "1SQ-cLR"
-    },
-    {
       "jobId": "1",
       "status": "Applied",
       "id": "l4KZq0l"
@@ -375,18 +350,6 @@
         "CSS"
       ],
       "location": "San Francisco, CA",
-      "companyId": 1
-    },
-    {
-      "id": "2",
-      "title": "Backend Developer",
-      "description": "Seeking a backend developer proficient in Node.js and MongoDB.",
-      "skills": [
-        "Node.js",
-        "MongoDB",
-        "Express"
-      ],
-      "location": "Remote",
       "companyId": 1
     },
     {
@@ -841,6 +804,42 @@
     },
     {
       "id": "7A1zRlc"
+    },
+    {
+      "nom": "HAMZA",
+      "prenom": "AZZAB",
+      "github": "ddddd",
+      "linkedin": "ddddddddd",
+      "summary": "ddddd",
+      "phone": "0657147321",
+      "skills": [
+        {
+          "name": "dddddd"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "dd",
+          "date": "dddddd"
+        }
+      ],
+      "experience": [
+        {
+          "title": "d",
+          "company": "dd",
+          "dates": "d",
+          "location": "d",
+          "description": "ddddd"
+        }
+      ],
+      "hobbies": [],
+      "education": [],
+      "projects": [],
+      "publications": [],
+      "languages": [],
+      "country": "Morocco",
+      "city": "Rabat",
+      "id": "PcJpK9C"
     }
   ]
 }
